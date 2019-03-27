@@ -3,6 +3,11 @@ class User < ApplicationRecord
 validates: :first_name, :last_name, :username, :email, :password_digest, :session_token, presence: true  
 validates: :password, length: {minimum: 6}, allow_nil: true  
 
+# belongs_to :location (add in later if implementing location filtering for user dashboard)
+# add associations for followers/followees if you get to that bonus
+has_many :tickets
+has_many :events
+
 after_initialize :ensure_session_token
 
 attr_reader :password
