@@ -1,6 +1,10 @@
 class User < ApplicationRecord
 
-validates: :first_name, :last_name, :username, :email, :password_digest, :session_token, presence: true  
+validates: :first_name, :last_name, presence: true 
+validates: :email, presence: true, uniqueness: true
+validates: :username, presence: true, uniqueness: true
+validates: :session_token, uniqueness: true
+validates: :producer_name, uniqueness: true, allow_nil: true
 validates: :password, length: {minimum: 6}, allow_nil: true  
 
 # belongs_to :location (add in later if implementing location filtering for user dashboard)
@@ -18,13 +22,13 @@ def password=(password)
 end
 
 def reset_session_token! 
-  self.session_token = self.generate_session_token
+  self.session_token = User.generate_session_token
   self.save!
   self.session_token
 end
 
 def ensure_session_token 
-  self.session_token ||= self.generate_session_token
+  self.session_token ||= User.generate_session_token
 end
 
 def find_by_credentials(username_or_email, password)
@@ -41,7 +45,7 @@ def is_password?(password)
   encrypted_password.is_password?(password)
 end
 
-def generate_session_token
+def self.generate_session_token
   SecureRandom.urlsafe_base64(16)
 end
 
