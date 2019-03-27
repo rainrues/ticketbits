@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   end
 
   def ensure_logged_in
-    redirect_to aoi_session_url unless logged_in?
+    redirect_to api_session_url unless logged_in?
   end
 
   def login!(user)
