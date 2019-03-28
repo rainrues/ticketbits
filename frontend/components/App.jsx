@@ -1,9 +1,13 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
+import GreetingContainer from './greeting/greeting_container';
 
 const App = () => (
   <div>
-    <h1>Ticket Bits</h1>
+    <header>
+      <h1>Ticket Bits</h1>
+      <GreetingContainer />
+    </header>
     {/* <Switch> */}
       {/* COMPONENTS GO HERE. MAKE SURE TO IMPORT FIRST */}
       {/* <Route exact path="/" component={PostIndexContainer} />
