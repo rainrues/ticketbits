@@ -8,7 +8,6 @@ export const signup = (user) => {
   );
 };
 
-// THIS HAS NOT BEEN TESTED
 export const login = (user) => {
   return (
     $.ajax({
@@ -19,7 +18,6 @@ export const login = (user) => {
   );
 };
 
-// THIS HAS NOT BEEN TESTED
 export const logout = () => {
   return (
     $.ajax({
