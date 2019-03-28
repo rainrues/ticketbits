@@ -36,7 +36,7 @@ def self.find_by_credentials(username_or_email, password)
   unless user
     user = User.find_by( email: username_or_email )
   end
-  return nil unless user && user.valid_password?(password)
+  return nil unless user && user.is_password?(password)
   user
 end
 
