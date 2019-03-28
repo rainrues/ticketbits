@@ -1,11 +1,11 @@
 class User < ApplicationRecord
 
-validates: :first_name, :last_name, presence: true 
-validates: :email, presence: true, uniqueness: true
-validates: :username, presence: true, uniqueness: true
-validates: :session_token, uniqueness: true
-validates: :producer_name, uniqueness: true, allow_nil: true
-validates: :password, length: {minimum: 6}, allow_nil: true  
+validates :first_name, :last_name, presence: true 
+validates :email, presence: true, uniqueness: true
+validates :username, presence: true, uniqueness: true
+validates :session_token, uniqueness: true
+validates :producer_name, uniqueness: true, allow_nil: true
+validates :password, length: {minimum: 6}, allow_nil: true  
 
 # belongs_to :location (add in later if implementing location filtering for user dashboard)
 # add associations for followers/followees if you get to that bonus
@@ -31,7 +31,7 @@ def ensure_session_token
   self.session_token ||= User.generate_session_token
 end
 
-def find_by_credentials(username_or_email, password)
+def self.find_by_credentials(username_or_email, password)
   user = User.find_by( username: username_or_email )
   unless user
     user = User.find_by( email: username_or_email )
