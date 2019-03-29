@@ -20,7 +20,7 @@ class EntryForm extends React.Component {
 
   render() {
     if (this.state.entryCheck === false) {
-      if (this.props.email) {
+      if (this.props.match) {
         return <Redirect to="/login" />
       } else {
         return <Redirect to="/signup" />

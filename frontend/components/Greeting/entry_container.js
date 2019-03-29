@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 
 const msp = state => ({
   email: state.session.email,
+  match: state.session.match,
   errors: Object.values(state.errors)
 });
 

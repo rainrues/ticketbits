@@ -41,9 +41,10 @@ export const receiveErrors = (errors) => {
   });
 };
 
-export const receiveEmail = ({email}) => {
+export const receiveEmail = ({email, match}) => {
   return ({
     type: "RECEIVE_EMAIL",
-    email: email
+    email: email, 
+    match: match
   });
 };

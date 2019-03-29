@@ -27,9 +27,9 @@ class Api::SessionsController < ApplicationController
     user = User.find_by(email: params[:email])
     if user
       email = user.email
-      render json: { email: email }
+      render json: { email: email, match: true }
     else
-      render json: { email: nil }
+      render json: { email: params[:email], match: false }
     end
   end
 
