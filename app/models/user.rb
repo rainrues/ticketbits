@@ -2,7 +2,6 @@ class User < ApplicationRecord
 
 validates :first_name, :last_name, presence: true 
 validates :email, presence: true, uniqueness: true
-validates :username, presence: true, uniqueness: true
 validates :session_token, uniqueness: true
 validates :producer_name, uniqueness: true, allow_nil: true
 validates :password, length: {minimum: 6}, allow_nil: true  
@@ -31,11 +30,8 @@ def ensure_session_token
   self.session_token ||= User.generate_session_token
 end
 
-def self.find_by_credentials(username_or_email, password)
-  user = User.find_by( username: username_or_email )
-  unless user
-    user = User.find_by( email: username_or_email )
-  end
+def self.find_by_credentials(email, password)
+  user = User.find_by( email: email )
   return nil unless user && user.is_password?(password)
   user
 end

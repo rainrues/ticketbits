@@ -5,7 +5,7 @@ const Greeting = ({currentUser, logout}) => {
   if (currentUser) {
     return (
       <div>
-        <h3>Welcome, {currentUser.username}</h3>
+        <h3>Welcome, {currentUser.first_name}</h3>
         <button onClick={logout}>Logout</button>
       </div>
     )

@@ -26,3 +26,13 @@ export const logout = () => {
     })
   );
 };
+
+export const check_email = (email) => {
+  return (
+    $.ajax({
+    method: "POST",
+    url: "api/email",
+    data: email
+    })
+  );
+};

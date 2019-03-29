@@ -1,4 +1,4 @@
-import { RECEIVE_CURRENT_USER, LOGOUT_CURRENT_USER } from '../actions/session_actions';
+import { RECEIVE_CURRENT_USER, LOGOUT_CURRENT_USER, RECEIVE_EMAIL } from '../actions/session_actions';
 import merge from 'lodash/merge';
 
 const sessionReducer = (oldState = { id: null }, action) => {
@@ -8,6 +8,8 @@ const sessionReducer = (oldState = { id: null }, action) => {
       return merge({}, oldState, { id: action.currentUser.id });
     case LOGOUT_CURRENT_USER:
       return merge({}, oldState, { id: null });
+    case RECEIVE_EMAIL:
+      return merge({}, oldState, { email: action.email });
     default:
       return oldState;
   }
