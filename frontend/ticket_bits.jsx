@@ -24,3 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // ReactDOM.render(<h1>Welcome to Ticket Bits!</h1>, root);
   ReactDOM.render(<Root store={store} />, root);
 });
+
+
+// NOTE: use this when trying to test actions in console: window.dispatch(loginAction({ username: "rain", password: "password" }))
