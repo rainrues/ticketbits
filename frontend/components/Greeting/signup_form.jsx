@@ -15,7 +15,7 @@ class SignupForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
-    this.props.login(user);
+    this.props.signup(user);
   }
 
   update(field) {
@@ -54,7 +54,7 @@ class SignupForm extends React.Component {
               id="password" />
           </label>
           <br />
-          <input type="Submit" value="Login" readOnly />
+          <input type="Submit" value="Sign Up" readOnly />
         </form>
       </div>
     )

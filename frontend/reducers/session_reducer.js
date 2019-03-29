@@ -9,7 +9,6 @@ const sessionReducer = (oldState = { id: null }, action) => {
     case LOGOUT_CURRENT_USER:
       return merge({}, oldState, { id: null });
     case RECEIVE_EMAIL:
-    debugger
       return merge({}, oldState, { email: action.email, match: action.match });
     default:
       return oldState;
