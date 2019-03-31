@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Greeting = ({currentUser, logout}) => {
-  if (currentUser) {
+const Greeting = ({logout}) => {
+  if (typeof(currentUser) !== "undefined") {
     return (
       <div>
         <h3>Welcome, {currentUser.first_name}</h3>

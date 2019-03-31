@@ -9,6 +9,22 @@ import * as sessionActions from './actions/session_actions';
 // TESTING
 
 document.addEventListener("DOMContentLoaded", () => {
+
+  // let store;
+  // if (window.currentUser) {
+  //   const preloadedState = {
+  //     entities: {
+  //       users: { [window.currentUser.id]: window.currentUser }
+  //     },
+  //     session: { id: window.currentUser.id }
+  //   };
+  //   store = configureStore(preloadedState);
+  //   delete window.currentUser;
+  // } else {
+  //   store = configureStore();
+  // }
+  // WHAT IS THIS SUPPOSED TO DO??
+
   const store = configureStore();
   // TESTING
   window.getState = store.getState;
@@ -21,7 +37,6 @@ document.addEventListener("DOMContentLoaded", () => {
   window.signupAction = sessionActions.signup;
   // TESTING
   const root = document.getElementById('root');
-  // ReactDOM.render(<h1>Welcome to Ticket Bits!</h1>, root);
   ReactDOM.render(<Root store={store} />, root);
 });
 

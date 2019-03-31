@@ -1,4 +1,5 @@
 import React from 'react';
+import { Redirect } from 'react-router-dom';
 
 class SignupForm extends React.Component {
   constructor(props) {
@@ -16,6 +17,7 @@ class SignupForm extends React.Component {
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.props.signup(user);
+    <Redirect to="/" />
   }
 
   update(field) {
