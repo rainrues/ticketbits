@@ -15,12 +15,12 @@ const NavBar = (props) => {
             <button>Help</button>
             <Link to='/events/new'>Create Event</Link>
 
-            <div>
+            <div> 
               <img src={props.currentUser.img_url} alt="" />
               {/* how to make this conditional? Can I set up a default photo in the database? */}
               <button>{props.currentUser.first_name}</button>
             </div>
-            {/* <button onClick={() => props.logout().then(() => props.history.push(`/`))}>Logout</button> */}
+            <button onClick={() => props.logout().then(() => props.history.push(`/`))}>Logout</button>
             {/* How to put this inside of dropdown? */}
           </section>
         </div>
