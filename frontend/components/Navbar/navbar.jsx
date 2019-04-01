@@ -1,50 +1,47 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
+// refactor later into shared return
 const NavBar = (props) => {
 
   const loggedIn = () => {
     return (
-      <div>
-        <div >
-          <Link to='/'>TicketBits</Link>
+      <div id="header-main-section">
+        {/* <div id="navbar-left"> */}
+          <Link className="ticketbits-home-icon" to='/'>TicketBits</Link>
+        {/* </div> */}
 
-          <section>
-            <Link to='/events'>Browse Events</Link>
-            <button>Organize</button>
-            <button>Help</button>
-            <Link to='/events/new'>Create Event</Link>
+        <section id="navbar-right">
+          <Link  className="navbar-item" id="browse-events-navbar" to='/events'>Browse Events</Link>
+          <Link className="navbar-item" id="organize-navbar" to="#">Organize</Link>
+          <Link className="navbar-item" id="help-navbar" to="#">Help</Link>
+          <Link  className="navbar-item" id="create-event-navbar" to='/events/new'>Create Event</Link>
 
-            <div> 
-              <img src={props.currentUser.img_url} alt="" />
-              {/* how to make this conditional? Can I set up a default photo in the database? */}
-              <button>{props.currentUser.first_name}</button>
-            </div>
-            <button onClick={() => props.logout().then(() => props.history.push(`/`))}>Logout</button>
-            {/* How to put this inside of dropdown? */}
-          </section>
-        </div>
-
+          <div> 
+            {/* <img className="mini-pic" src={props.currentUser.img_url} alt="" /> */}
+            {/* how to make this conditional? Can I set up a default photo in the database? */}
+            <Link className="navbar-item" id="users-name"to="#">{props.currentUser.first_name}</Link>
+          </div>
+          <Link className="navbar-item" to="#"id="logout-navbar" onClick={() => props.logout().then(() => props.history.push(`/`))}>Logout</Link>
+          {/* How to put this inside of dropdown? */}
+        </section>
       </div>
     );
   };
 
   const loggedOut = () => {
     return (
-      <div>
-        <div>
+      <div id="header-main-section">
+        {/* <div id="navbar-left"> */}
           <Link to='/'>TicketBits</Link>
+        {/* </div> */}
 
-          <section>
-            <Link to='/events'>Browse Events</Link>
-            <button>Organize</button>
-            <button>Help</button>
-            <Link to='/events/new'>Create Event</Link>
+        <section id="navbar-right">
+          <Link  className="navbar-item" id="browse-events-navbar" to='/events'>Browse Events</Link>
+          <Link className="navbar-item" id="help-navbar" to="#">Help</Link>
 
-            <Link to='/getStarted'>Sign In</Link>
-          </section>
-        </div>
-
+          <Link className="navbar-item" id="signin-navbar" to='/getStarted'>Sign In</Link>
+        </section>
       </div>
     );
   };

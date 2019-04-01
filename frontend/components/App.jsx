@@ -16,16 +16,16 @@ const App = () => (
       {/* <GreetingContainer /> */}
     </header>
 
+    {/* <Switch> */}
     <Route exact path="/" component={GreetingContainer} />
     <AuthRoute exact path="/getStarted" component={EntryContainer} />
     <AuthRoute exact path="/login" component={LoginFormContainer} />
     <AuthRoute exact path="/signup" component={SignupFormContainer} />
-    {/* <Switch> */}
-      {/* COMPONENTS GO HERE. MAKE SURE TO IMPORT FIRST */}
-      {/* <Route exact path="/" component={PostIndexContainer} />
-      <Route exact path="/posts/:postId" component={PostShowContainer} />
-      <Route path="/posts/:postId/edit" component={EditPostFormContainer} /> */}
     {/* </Switch> */}
+
+    <footer>
+      
+    </footer>  
   </div>
 );
 

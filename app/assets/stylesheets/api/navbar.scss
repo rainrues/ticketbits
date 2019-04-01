@@ -1,0 +1,88 @@
+#header-main-section {
+  display: flex;
+  justify-content: space-between;
+  height: 59px;
+  border-bottom: 1px solid #717688;
+  background-color: transparent;
+  align-items: center;
+  font-size: 16px;
+}
+
+// CHANGE FONTS
+#navbar-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end; 
+  align-items: center;
+  font-family: Benton Sans, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+  color: #717588;
+  text-align: center;
+  width: minmax(632px, auto);
+}
+
+.navbar-item {
+  font-family: Benton Sans, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+  color: #717588;
+  text-align: center;
+  text-decoration-line: none;
+}
+
+.ticketbits-home-icon {
+  color: #f05537;
+  font-size: 22px;
+  font-family: Benton Sans, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Tahoma, Arial, sans-serif;
+  padding: 10px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  width: 130px;
+  text-align: center;
+  font-weight: bold;
+  text-decoration-line: none;
+}
+
+#browse-events-navbar {
+  width: 140px;
+}
+
+#organize-navbar {
+  width: 190px;
+}
+
+#help-navbar {
+  width: 70px;
+}
+
+#create-event-navbar {
+  width: 140px;
+  color: #3d64ff;
+}
+
+#logout-navbar {
+  width: 90px;
+}
+
+#signin-navbar {
+  width: 100px;
+}
+
+
+#users-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-left: 1px solid rgb(236, 236, 240);
+  height: 100%;
+}
+
+.mini-pic {
+  
+  display: flex;
+  width: 45px;
+  height: 45px;
+  margin: 0;
+  border: #8e9293
+
+}

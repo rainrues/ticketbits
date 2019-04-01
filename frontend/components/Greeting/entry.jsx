@@ -28,7 +28,7 @@ class EntryForm extends React.Component {
     }
 
     return (
-      <div>
+      <div className="entry-main-block">
         <h2>Let's get started</h2>
         <p>Use facebook or email to get started.</p>
         <form onSubmit={this.handleSubmit}>
