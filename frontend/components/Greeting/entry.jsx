@@ -1,11 +1,13 @@
 import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
+import Footer from "../Footer/footer";
 
 class EntryForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = { email: "", entryCheck: true };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDemo = this.handleDemo.bind(this);
   }
 
   handleSubmit(e) {
@@ -13,6 +15,10 @@ class EntryForm extends React.Component {
     this.props.check_email(this.state).then(() => this.setState({entryCheck: false}));
   }
   
+  handleDemo(e) {
+    e.preventDefault();
+    this.props.login({email: 'rainrues@gmail.com', password: 'password'});
+  }
 
   update() {
     return (e) => this.setState({ email: e.target.value });
@@ -28,6 +34,7 @@ class EntryForm extends React.Component {
     }
 
     return (
+    <div>
       <div className="entry-main-block">
         <h1 id="entry-page-logo" >e</h1>
         <h2 className="greeting-heading" >Let's get started</h2>
@@ -43,10 +50,12 @@ class EntryForm extends React.Component {
             </label>
           <input className="greeting-submit-button" type="Submit" value="Get Started" readOnly />
           <p id="entry-connector" >or</p>
-          <input className="greeting-submit-button" id="facebook-submit" type="Submit" value="Continue with Facebook" readOnly />
+          <input className="greeting-submit-button" id="facebook-submit" value="Continue with DemoUser" onClick={this.handleDemo} readOnly />
           <p className="entry-subtext" >By continuing, I accept the Eventbrite terms of service, community guidelines and have read the privacy policy.</p>
         </form>
       </div>
+        <Footer />
+    </div >
     )
   }
 }

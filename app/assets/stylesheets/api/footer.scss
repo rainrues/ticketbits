@@ -1,0 +1,43 @@
+#main-footer-body {
+  display: flex;
+  flex-direction: row;
+  background-color: #1e0a3c;
+  width: 100%;
+  margin: auto;
+  height: 54px;
+  position: absolute;
+  bottom: 0;
+  justify-content: space-between;
+}
+
+#footer-bullet-points {
+  width: 66.666666%;
+  line-height: 22px;
+  font-weight: 400;
+  padding: 16px;
+}
+
+#footer-bullet-points-ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footer-text-element {
+  text-align: center;
+  color: #aaa4b8;
+  text-decoration-line: none;
+}
+
+#footer-copyright {
+  line-height: 22px;
+  font-weight: 400;
+  padding: 16px;
+}
+  
+#footer-location {
+  line-height: 22px;
+  font-weight: 400;
+  padding: 16px;
+}
+

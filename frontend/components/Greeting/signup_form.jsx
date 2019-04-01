@@ -2,6 +2,7 @@ import React from 'react';
 import { Redirect } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
+import Footer from "../Footer/footer";
 
 class SignupForm extends React.Component {
   constructor(props) {
@@ -28,6 +29,7 @@ class SignupForm extends React.Component {
 
   render() {
     return (
+    <div>
       <div id="main-signup-body" >
         <div><i className=" default-user-icon far fa-user fa-3x"></i></div>
         <h1 className="greeting-heading" >Welcome</h1>
@@ -69,7 +71,9 @@ class SignupForm extends React.Component {
           </label>
           <input className="greeting-submit-button" type="Submit" value="Sign Up" readOnly />
         </form>
-      </div>
+        </div>
+        <Footer />
+      </div >
     )
   }
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import { Redirect } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
+import Footer from "../Footer/footer";
 
 class LoginForm extends React.Component {
     constructor(props) {
@@ -26,6 +27,7 @@ class LoginForm extends React.Component {
 
     render () {
       return (
+      <div>
         <div id="main-login-body">
           <div><i className=" default-user-icon far fa-user fa-3x"></i></div>
           {/* <div><FontAwesomeIcon className="default-user-icon" icon={faUser} /></div> */}
@@ -53,7 +55,9 @@ class LoginForm extends React.Component {
             <input className="greeting-submit-button" type="Submit" value="Log In" readOnly/>
             <p id="forgot-password" >Forgot password</p>
         </form>
-      </div>
+        </div>
+        <Footer />
+      </div >
     )
   }
 }
