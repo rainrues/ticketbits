@@ -1,5 +1,7 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUser } from '@fortawesome/free-solid-svg-icons'
 
 class SignupForm extends React.Component {
   constructor(props) {
@@ -26,37 +28,46 @@ class SignupForm extends React.Component {
 
   render() {
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
-          <label htmlFor="email">Email:
-              <input type="text"
+      <div id="main-signup-body" >
+        <div><i className=" default-user-icon far fa-user fa-3x"></i></div>
+        <h1 className="greeting-heading" >Welcome</h1>
+        <p className="greeting-subtext" >Create an account.</p>
+        <form id="signup-form" onSubmit={this.handleSubmit}>
+          <label htmlFor="email">
+              <input className="greeting-form-input" 
+              placeholder="Email address"
+              type="text"
               value={this.state.email}
               onChange={this.update('email')}
               id="email" />
           </label>
-          <br />
-          <label htmlFor="first name">First name:
-              <input type="text"
-              value={this.state.first_name}
-              onChange={this.update('first_name')}
-              id="first name" />
-          </label>
-          <br />
-          <label htmlFor="last name">Last name:
-              <input type="text"
-              value={this.state.last_name}
-              onChange={this.update('last_name')}
-              id="last name" />
-          </label>
-          <br />
-          <label htmlFor="password">Password:
-              <input type="password"
+          <div id="middle-line-signup" >
+            <label htmlFor="first name">
+                <input className="greeting-form-middle-input" 
+                type="text"
+                placeholder="First Name"
+                value={this.state.first_name}
+                onChange={this.update('first_name')}
+                id="first name" />
+            </label>
+            <label htmlFor="last name">
+                <input className="greeting-form-middle-input" 
+                placeholder="Last Name"
+                type="text"
+                value={this.state.last_name}
+                onChange={this.update('last_name')}
+                id="last name" />
+            </label>
+          </div>
+          <label htmlFor="password">
+              <input className="greeting-form-input" 
+              type="password"
+              placeholder="Password"
               value={this.state.password}
               onChange={this.update('password')}
               id="password" />
           </label>
-          <br />
-          <input type="Submit" value="Sign Up" readOnly />
+          <input className="greeting-submit-button" type="Submit" value="Sign Up" readOnly />
         </form>
       </div>
     )

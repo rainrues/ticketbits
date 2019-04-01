@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   height: 59px;
-  border-bottom: 1px solid #717688;
+  border-bottom: 1px solid #eeedf2;
   background-color: transparent;
   align-items: center;
   font-size: 16px;
@@ -14,15 +14,15 @@
   flex-direction: row;
   justify-content: flex-end; 
   align-items: center;
-  font-family: Benton Sans, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
-  color: #717588;
+  font-family: Neue Plak,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
   text-align: center;
   width: minmax(632px, auto);
 }
 
 .navbar-item {
-  font-family: Benton Sans, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
-  color: #717588;
+  font-family: Neue Plak,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
+  color: #6f7287;
+  font-weight: 350;
   text-align: center;
   text-decoration-line: none;
 }
@@ -30,7 +30,7 @@
 .ticketbits-home-icon {
   color: #f05537;
   font-size: 22px;
-  font-family: Benton Sans, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Tahoma, Arial, sans-serif;
+  font-family: Neue Plak,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
   padding: 10px;
   justify-content: center;
   display: flex;
@@ -42,7 +42,7 @@
 }
 
 #browse-events-navbar {
-  width: 140px;
+  width: 115px;
 }
 
 #organize-navbar {
@@ -50,7 +50,7 @@
 }
 
 #help-navbar {
-  width: 70px;
+  width: 110px;
 }
 
 #create-event-navbar {
@@ -59,11 +59,11 @@
 }
 
 #logout-navbar {
-  width: 90px;
+  width: 70px;
 }
 
 #signin-navbar {
-  width: 100px;
+  width: 90px;
 }
 
 
@@ -73,16 +73,15 @@
   align-items: center;
   padding-left: 30px;
   padding-right: 30px;
-  border-left: 1px solid rgb(236, 236, 240);
   height: 100%;
 }
 
-.mini-pic {
+// .mini-pic {
   
-  display: flex;
-  width: 45px;
-  height: 45px;
-  margin: 0;
-  border: #8e9293
+//   display: flex;
+//   width: 45px;
+//   height: 45px;
+//   margin: 0;
+//   border: #8e9293
 
-}
+// }

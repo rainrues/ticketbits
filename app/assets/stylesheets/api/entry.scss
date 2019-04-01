@@ -1,5 +1,78 @@
 .entry-main-block {
   max-width: 320px;
-  margin: auto;
-  padding-top: 300px;
+  margin: 0 auto;
+  padding-top: 25px;
+  font-family: Neue Plak,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
+}
+
+#entry-page-logo {
+  color: #f05537;
+  text-align: center;
+  font-size: 100px;
+  font-family: 'Times New Roman', Times, serif
+}
+
+.greeting-heading {
+  text-align: center; 
+  color: #1d093c;
+  font-size: 1.5rem;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.greeting-subtext {
+  text-align: center;
+  color: #6f7387;
+  font-size: 13px;
+  margin: 15px;
+  margin-bottom: 35px;
+}
+
+#entry-form {
+  display: flex;
+  min-height: 275px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.greeting-form-input {
+  padding: 16px;
+  margin: 0 auto;
+  width: 284px;
+  font-size: 16px;
+}
+
+.greeting-form-input::placeholder {
+  font-size: 16px;
+}
+
+input:hover {
+  outline: 1px solid #c0c0cc;
+}
+
+.greeting-submit-button {
+  background-color: #d1400b;
+  color: #ffffff;
+  padding: 12px;
+  margin: 0 auto;
+  width: 320px;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+#entry-connector {
+  text-align: center;
+  font-size: 11px;
+}
+
+#facebook-submit {
+  background-color: #4267b1;
+  color: #ffffff;
+}
+
+.entry-subtext {
+  text-align: center;
+  font-size: 11px;
+  color: #9598a7;
 }

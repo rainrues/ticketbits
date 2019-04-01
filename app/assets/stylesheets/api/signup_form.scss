@@ -1,0 +1,29 @@
+#main-signup-body {
+  max-width: 320px;
+  margin: 0 auto;
+  padding-top: 25px;
+  font-family: Neue Plak,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
+}
+
+#signup-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 250px;
+}
+
+.greeting-form-middle-input {
+  padding: 16px;
+  margin: 0 auto;
+  width: 115px;
+  font-size: 16px;
+}
+
+.greeting-form-middle-input::placeholder {
+  font-size: 16px;
+}
+
+#middle-line-signup {
+  display: flex;
+  justify-content: space-between;
+}

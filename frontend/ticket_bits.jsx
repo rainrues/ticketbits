@@ -23,9 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
   } else {
     store = configureStore();
   }
-  // WHAT IS THIS SUPPOSED TO DO??
 
-  // const store = configureStore();
   // TESTING
   window.getState = store.getState;
   window.dispatch = store.dispatch;

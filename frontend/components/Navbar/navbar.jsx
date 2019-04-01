@@ -8,7 +8,7 @@ const NavBar = (props) => {
     return (
       <div id="header-main-section">
         {/* <div id="navbar-left"> */}
-          <Link className="ticketbits-home-icon" to='/'>TicketBits</Link>
+          <Link className="ticketbits-home-icon" to='/'>ticketbits</Link>
         {/* </div> */}
 
         <section id="navbar-right">
@@ -33,7 +33,7 @@ const NavBar = (props) => {
     return (
       <div id="header-main-section">
         {/* <div id="navbar-left"> */}
-          <Link to='/'>TicketBits</Link>
+        <Link className="ticketbits-home-icon" to='/'>ticketbits</Link>
         {/* </div> */}
 
         <section id="navbar-right">
