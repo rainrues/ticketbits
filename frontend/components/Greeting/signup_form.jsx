@@ -9,7 +9,8 @@ class SignupForm extends React.Component {
       email: this.props.email,
       first_name: "",
       lst_name: "",
-      password: ""
+      password: "",
+      errors: this.props.errors 
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -67,6 +68,9 @@ class SignupForm extends React.Component {
               onChange={this.update('password')}
               id="password" />
           </label>
+          <div className="errors">
+            {this.props.errors}
+          </div>
           <input className="greeting-submit-button" type="Submit" value="Sign Up" readOnly />
         </form>
         </div>

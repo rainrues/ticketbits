@@ -50,7 +50,9 @@ class LoginForm extends React.Component {
                 onChange={this.update('password')} 
                 id="password" />
             </label>
+            <div className="errors">
               {this.props.errors}
+            </div>
             <br/>
             <input className="greeting-submit-button" type="Submit" value="Log In" readOnly/>
             <p id="forgot-password" >Forgot password</p>
