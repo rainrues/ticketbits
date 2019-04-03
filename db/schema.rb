@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_02_224259) do
+ActiveRecord::Schema.define(version: 2019_04_03_161751) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,11 +20,9 @@ ActiveRecord::Schema.define(version: 2019_04_02_224259) do
     t.integer "age", null: false
     t.integer "low_price"
     t.integer "price", null: false
-    t.string "location", null: false
     t.text "about"
     t.integer "num_tickets", null: false
     t.string "image_url"
-    t.integer "location_id"
     t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -32,12 +30,22 @@ ActiveRecord::Schema.define(version: 2019_04_02_224259) do
     t.date "end_date", null: false
     t.time "start_time", null: false
     t.time "end_time", null: false
+    t.string "venue_name", null: false
+    t.string "address", null: false
+    t.string "address2"
+    t.string "city", null: false
+    t.string "state", null: false
+    t.string "country", null: false
+    t.integer "zip", null: false
     t.index ["age"], name: "index_events_on_age"
-    t.index ["location"], name: "index_events_on_location"
+    t.index ["city"], name: "index_events_on_city"
     t.index ["low_price"], name: "index_events_on_low_price"
     t.index ["price"], name: "index_events_on_price"
     t.index ["start_date"], name: "index_events_on_start_date"
+    t.index ["state"], name: "index_events_on_state"
     t.index ["title"], name: "index_events_on_title"
+    t.index ["venue_name"], name: "index_events_on_venue_name"
+    t.index ["zip"], name: "index_events_on_zip"
   end
 
   create_table "users", force: :cascade do |t|
