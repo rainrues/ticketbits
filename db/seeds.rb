@@ -57,7 +57,7 @@ a = Event.create!(
   age: 21,
   price: 15,
   num_tickets: 300,
-  description: "Come dance all night with us at our little slice of heaven. Snacks 
+  about: "Come dance all night with us at our little slice of heaven. Snacks 
     and non-alcoholic beverages provided.",
   venue_name: "Narnia",
   address: "521 Eastern Parkway",
@@ -70,7 +70,6 @@ a = Event.create!(
   start_date: Date.parse("November 14 2019"),
   end_date: Date.parse("November 15 2019"),
   user_id: rain[:id]
-  image_url: 
 )
 
 b = Event.create!(
@@ -78,7 +77,7 @@ b = Event.create!(
   age: 21,
   price: 150,
   num_tickets: 3000,
-  description: "Come dance all night with us at our little slice of heaven. Snacks 
+  about: "Come dance all night with us at our little slice of heaven. Snacks 
     and non-alcoholic beverages provided.",
   venue_name: "Riche Beach",
   address: "521 Eastern Parkway",
@@ -90,8 +89,26 @@ b = Event.create!(
   end_time: Time.parse("04:00"),
   start_date: Date.parse("May 14 2019"),
   end_date: Date.parse("May 16 2019"),
+  user_id: rain[:id] 
+)
+
+c = Event.create!(
+  title: "Birthday Dance Party",
+  start_date: Date.parse("April 6 2019"),
+  end_date: Date.parse("April 7 2019"),
+  start_time: Time.parse("22:00"),
+  end_time: Time.parse("4:00"),
+  age: 21,
+  price: 20,
+  venue_name: "Founders Lab, NYC",
+  address: "28 Montrose st",
+  city: "Brooklyn",
+  state: "New York",
+  country: "United States of America",
+  zip: 11116,
+  about: "A night to celebrate, dance, and bring in my new year",
+  num_tickets: 100,
   user_id: rain[:id]
-  image_url: 
 )
 
 
