@@ -8,7 +8,7 @@ class Api::EventsController < ApplicationController
 
     def show
         @event = Event.find(params[:id])
-        redner :show
+        render :show
     end
 
     # NEEDED ONCE I HAVE A USER'S TICKETED EVENTS INDEX PAGE
@@ -60,7 +60,14 @@ class Api::EventsController < ApplicationController
             :low_price,
             :about,
             :image_url,
-            :location_id
+            :location_id,
+            :venue_name,
+            :address,
+            :address2,
+            :city,
+            :state,
+            :country,
+            :zip
         )
     end
 end

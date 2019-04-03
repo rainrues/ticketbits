@@ -6,6 +6,7 @@ import Root from './components/Root';
 // TESTING
 import * as sessionApiUtil from './util/session_api_util';
 import * as sessionActions from './actions/session_actions';
+import * as eventActions from './actions/event_actions';
 // TESTING
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -33,7 +34,10 @@ document.addEventListener("DOMContentLoaded", () => {
   window.loginAction = sessionActions.login;
   window.logoutAction = sessionActions.logout;
   window.signupAction = sessionActions.signup;
+  window.fetchAllEvents = eventActions.fetchAllEvents;
+  window.fetchEvent = eventActions.fetchEvent;
   // TESTING
+
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store} />, root);
 });
