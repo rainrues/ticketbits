@@ -1,15 +1,15 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser } from '@fortawesome/free-solid-svg-icons'
 import Footer from "../Footer/footer";
 
 class LoginForm extends React.Component {
     constructor(props) {
         super(props);
+        debugger
         this.state = { 
           email: this.props.email,
-          password: "" 
+          password: "",
+          errors: this.props.errors 
         };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -18,7 +18,6 @@ class LoginForm extends React.Component {
         e.preventDefault();
         const user = Object.assign({}, this.state);
         this.props.login(user);
-        <Redirect to="/" />
     }
 
     update(field) {
@@ -51,6 +50,7 @@ class LoginForm extends React.Component {
                 onChange={this.update('password')} 
                 id="password" />
             </label>
+              {this.props.errors}
             <br/>
             <input className="greeting-submit-button" type="Submit" value="Log In" readOnly/>
             <p id="forgot-password" >Forgot password</p>

@@ -10,27 +10,23 @@ const Footer = (props) => {
       </div>
       <div id="footer-bullet-points">
         <ul id="footer-bullet-points-ul">
-        <Link className="footer-text-element" to="#">About</Link>
-        <li></li>
-        <Link className="footer-text-element" to="#">Blog</Link>
-        <li></li>
-        <Link className="footer-text-element" to="#">Help</Link>
-        <li></li>
-        <Link className="footer-text-element" to="#">Careers</Link>
-        <li></li>
-        <Link className="footer-text-element" to="#">Press</Link>
-        <li></li>
-        <Link className="footer-text-element" to="#">Investors</Link>
-        <li></li>
-        <Link className="footer-text-element" to="#">Security</Link>
-        <li></li>
-        <Link className="footer-text-element" to="#">Developers</Link>
-        <li></li>
-        <Link className="footer-text-element" to="#">Terms</Link>
-        <li></li>
-        <Link className="footer-text-element" to="#">Privacy</Link>
-        <li></li>
-        <Link className="footer-text-element" to="#">Cookies</Link> 
+          <li><Link className="footer-text-element" to="#">About</Link></li>
+          <li>•</li>
+          <li><Link className="footer-text-element" to="#">Blog</Link></li>
+          <li>•</li>
+          <li><a className="footer-text-element" href="https://github.com/rainrues/ticketbits">Help</a></li>
+          <li>•</li>
+          <li><a className="footer-text-element" href="https://www.linkedin.com/in/rain-rues-08560854/">Linked In</a></li>
+          <li>•</li>
+          <li><a className="footer-text-element" href="">Personal Website</a></li>
+          <li>•</li>
+          <li><a className="footer-text-element" href="https://github.com/rainrues">Github</a></li>
+          <li>•</li>
+          <li><Link className="footer-text-element" to="#">Security</Link></li>
+          <li>•</li>
+          <li><Link className="footer-text-element" to="#">Terms</Link></li>
+          <li>•</li>
+          <li><Link className="footer-text-element" to="#">Cookies</Link> </li>
         </ul>
       </div>
       <div id="footer-location">

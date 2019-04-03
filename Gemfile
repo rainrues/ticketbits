@@ -17,6 +17,8 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'mini_racer', platforms: :ruby
 # for testing code snippits
 gem 'pry-rails', '~> 0.3.9'
+# provides deep information about app performance (http://www.newrelic.com)
+gem 'newrelic_rpm'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'

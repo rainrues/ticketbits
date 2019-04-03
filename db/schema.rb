@@ -10,10 +10,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_29_213818) do
+ActiveRecord::Schema.define(version: 2019_04_02_224259) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "events", force: :cascade do |t|
+    t.string "title", null: false
+    t.integer "age", null: false
+    t.integer "low_price"
+    t.integer "price", null: false
+    t.string "location", null: false
+    t.text "about"
+    t.integer "num_tickets", null: false
+    t.string "image_url"
+    t.integer "location_id"
+    t.integer "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.date "start_date", null: false
+    t.date "end_date", null: false
+    t.time "start_time", null: false
+    t.time "end_time", null: false
+    t.index ["age"], name: "index_events_on_age"
+    t.index ["location"], name: "index_events_on_location"
+    t.index ["low_price"], name: "index_events_on_low_price"
+    t.index ["price"], name: "index_events_on_price"
+    t.index ["start_date"], name: "index_events_on_start_date"
+    t.index ["title"], name: "index_events_on_title"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "first_name", null: false

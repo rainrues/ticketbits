@@ -1,0 +1,69 @@
+#splashimage-1 {
+  width: 100%;
+  height: 100%;
+}
+
+#splash-page-search-bar {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: row;
+  min-height: 100px;
+  flex-wrap: nowrap;
+  width: 85%;
+  // top: -100px;
+  max-width: 1200px;
+  justify-content: space-between;
+  font-family: Neue Plak,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
+}
+
+.splash-page-search-item {
+  background-color: #1e093c;
+  width: 350px;
+  max-height: 96px;
+  color: #ffffff;
+  padding: 16px;
+  // font-weight: 50;
+  font-size: 13px;
+}
+
+.splash-page-input {
+  padding: 12px 14px;
+  background-color: #1e093c;
+  outline: none;
+  border-width: 0px 0px 1px 0px;
+  border-color: #d0410b;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+}
+
+#splash-page-search-submit {
+  background-color: #1e093c;
+  width: 112px;
+  max-height: 96px;
+  padding: 16px;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+#splash-page-search-submit-button {
+  background-color: #d0410b;
+  width: 72px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border-width: 0px;
+  border-radius: 5px;
+}
+
+#splash-page-looking-for {
+  border-right: 1px solid #ffffff;
+}
+
+#splash-page-in {
+  border-right: 1px solid #ffffff;
+}

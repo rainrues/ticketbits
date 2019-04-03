@@ -13,7 +13,6 @@ const App = () => (
   <div>
     <header>
       <NavBar /> 
-      {/* <GreetingContainer /> */}
     </header>
 
     {/* <Switch> */}

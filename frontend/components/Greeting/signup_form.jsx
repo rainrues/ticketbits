@@ -1,7 +1,5 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser } from '@fortawesome/free-solid-svg-icons'
 import Footer from "../Footer/footer";
 
 class SignupForm extends React.Component {

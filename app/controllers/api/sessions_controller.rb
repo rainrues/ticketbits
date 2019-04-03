@@ -9,7 +9,7 @@ class Api::SessionsController < ApplicationController
       login!(@user)
       render 'api/users/show';
     else
-      render json: ['Wrong user credentials!'], status: 401 
+      render json: ['Incorrect password'], status: 401 
     end
   end
 
@@ -17,7 +17,6 @@ class Api::SessionsController < ApplicationController
     if current_user
       logout!
       render json: { }
-      # render json: ['Logout successful.'] WHY NOT THIS? 
     else
       render json: ["no user to logout"], status: 404
     end

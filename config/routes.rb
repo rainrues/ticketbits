@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   namespace :api, defaults: {format: :json} do
     resources :users, only: [:show, :create]
     resource :session, only: [:create, :destroy]
+    resources :events, except: [:new, :edit]
 
     post '/email', to: 'sessions#email'
   end

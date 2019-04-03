@@ -2,6 +2,8 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
 // refactor later into shared return
+// Return all of the main things and then have a turnary 
+// opporator in the return that adds the additional butons
 const NavBar = (props) => {
 
   const loggedIn = () => {

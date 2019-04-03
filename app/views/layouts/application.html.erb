@@ -8,7 +8,10 @@
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script>
+    <script>window.splashImageURL = "<%= image_url('splashpic-1.jpg') %>"</script>
+    <script>window.searchImageURL = "<%= image_url('white-search-icon.png') %>"</script>
   </head>
+
 
   <body>
     <%= yield %>
