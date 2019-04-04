@@ -11,9 +11,6 @@ class EventIndex extends React.Component {
 
   componentDidMount() {
     this.props.fetchAllEvents();
-    // this.props.fetchAllEvents().then( events => )
-    // debugger
-    // this.setState({ events: Array.from(this.props.events)}); 
   }
 
   render() {

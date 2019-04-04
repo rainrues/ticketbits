@@ -1,7 +1,6 @@
 import React from 'react';
 import EventIndex from '../Events/event_index_container';
 import Footer from '../Footer/footer';
-import { Link } from 'react-router-dom';
 
 const Greeting = ({logout}) => {
   if (typeof(currentUser) !== "undefined") {

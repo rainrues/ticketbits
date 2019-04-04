@@ -8,6 +8,7 @@ import EntryContainer from './Greeting/entry_container';
 import LoginFormContainer from './Greeting/login_form_container';
 import SignupFormContainer from './Greeting/signup_form_container';
 import NavBar from './Navbar/navbar_container';
+import EventShowContainer from './Events/event_show_container';
 
 const App = () => (
   <div>
@@ -20,6 +21,7 @@ const App = () => (
     <AuthRoute exact path="/getStarted" component={EntryContainer} />
     <AuthRoute exact path="/login" component={LoginFormContainer} />
     <AuthRoute exact path="/signup" component={SignupFormContainer} />
+    <Route exact path="/events/:eventId" component={EventShowContainer} />
     {/* </Switch> */}
 
     <footer>

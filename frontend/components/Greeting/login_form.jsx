@@ -5,7 +5,6 @@ import Footer from "../Footer/footer";
 class LoginForm extends React.Component {
     constructor(props) {
         super(props);
-        debugger
         this.state = { 
           email: this.props.email,
           password: "",

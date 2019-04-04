@@ -104,19 +104,26 @@ class EventIndexItem extends React.Component {
               <button className="event-price">{this.state.price}</button>
             </div>
           </div>
-          <div className="index-item-bottom-section">
-            <div className="event-info">
-              <time className="event-time">{this.formatDate("startDate")}</time>
-              <h2 className="event-title">{this.state.title}</h2>
-              <div className="event-location">
-                {this.state.venue_name}, {this.state.city}
-              </div>
-            </div>
-          </div>
           <div className="event-item-middle">
             <div className="event-middle-actions">
               <button className="event-middle-button"><i className="fas fa-arrow-up fa-lg"></i></button>
               <button className="event-middle-button"><i className="far fa-heart fa-lg"></i></button>
+            </div>
+          </div>
+          <div className="index-item-bottom-section">
+            <div className="bottom-section-left">
+              <p className="bottom-section-left-month">{this.setMonth("startDate")}</p>
+              <p className="bottom-section-left-day">{this.state.start_date_object.date}</p>
+            </div>
+            <div className="event-info">
+              <h2 className="event-title">{this.state.title}</h2>
+              <div className="bottom-section-small-text">
+                <time className="event-time">{this.formatDate("startDate")}</time>
+                <div className="event-location">
+                  {this.state.venue_name}, {this.state.city}
+                </div>
+                <div>{this.state.price}</div>
+              </div>
             </div>
           </div>
         </div>
