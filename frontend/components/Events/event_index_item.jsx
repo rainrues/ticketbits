@@ -89,19 +89,19 @@ class EventIndexItem extends React.Component {
   }
 
   render() {
-    // if (!this.props.event) {
-    //   return null;
-    // }
+    if (this.state.price === 0 ) {
+      this.setState({price: "Free"});
+    }
 
     return (
       <div className="event-index-item">
-        <div className="index-item-padding-and-shaddow">
+        <div className="index-item-shaddow">
           <div className="index-item-click" onClick={this.handleClick}>
             <div className="index-item-event-image-container">
               <img className="index-item-event-image" src={this.state.image_url} alt="event image"/>
             </div>
             <div>
-              <button>{this.state.price}</button>
+              <button className="event-price">{this.state.price}</button>
             </div>
           </div>
           <div className="index-item-bottom-section">
@@ -111,13 +111,12 @@ class EventIndexItem extends React.Component {
               <div className="event-location">
                 {this.state.venue_name}, {this.state.city}
               </div>
-              <h2 className="event-price">{this.state.price}</h2>
             </div>
           </div>
           <div className="event-item-middle">
             <div className="event-middle-actions">
-              <button className="event-middle-button"></button>
-              <button className="event-middle-button"></button>
+              <button className="event-middle-button"><i className="fas fa-arrow-up fa-lg"></i></button>
+              <button className="event-middle-button"><i className="far fa-heart fa-lg"></i></button>
             </div>
           </div>
         </div>

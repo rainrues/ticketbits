@@ -28,7 +28,7 @@
 }
 
 .splash-page-input {
-  padding: 12px 14px;
+  padding: 12px 14px 0px 14px;
   background-color: #1e093c;
   outline: none;
   border-width: 0px 0px 1px 0px;
@@ -37,6 +37,7 @@
   font-weight: 600;
   font-size: 1.125rem;
   line-height: 1.5rem;
+  position: absolute;
 }
 
 #splash-page-search-submit {
@@ -57,6 +58,7 @@
   display: flex;
   justify-content: center;
   align-content: center;
+  margin-top: 13px;
   border-width: 0px;
   border-radius: 5px;
 }

@@ -23,19 +23,19 @@ const Greeting = ({logout}) => {
             <div className="splash-page-search-item" id="splash-page-looking-for">
               <div><p>Looking for</p></div>
               <div>
-                <input className="splash-page-input" type="text" name="" id=""/>
+                <input placeholder="Event" className="splash-page-input" type="text" name="" id=""/>
               </div>
             </div>
             <div className="splash-page-search-item" id="splash-page-in">
               <div><p>In</p></div>
               <div>
-                <input className="splash-page-input" type="text"/>
+                <input placeholder="New York" className="splash-page-input" type="text"/>
               </div>
             </div>
             <div className="splash-page-search-item">
               <div><p>On</p></div>
               <div>
-                <input className="splash-page-input" type="text"/>
+                <input placeholder="Any Date" className="splash-page-input" type="text"/>
               </div>
             </div>
             <div id="splash-page-search-submit">
