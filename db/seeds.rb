@@ -96,65 +96,69 @@ b = Event.create!(
 )
 
 c = Event.create!(
-  title: "Birthday Party",
-  start_date: Date.parse("April 6 2019"),
-  end_date: Date.parse("April 7 2019"),
-  start_time: Time.parse("22:00"),
+  title: "Queer Brunch",
+  start_date: Date.parse("June 9 2019"),
+  end_date: Date.parse("June 9 2019"),
+  start_time: Time.parse("2:00"),
   end_time: Time.parse("4:00"),
-  age: 21,
-  price: 20,
-  venue_name: "Founders Lab, NYC",
-  address: "28 Montrose st",
+  age: 18,
+  price: 0,
+  venue_name: "Breuklyn",
+  address: "15 Franklin ave",
   city: "Brooklyn",
   state: "New York",
   country: "United States of America",
   zip: 11116,
-  about: "A night to celebrate, dance, and bring in my new year",
-  num_tickets: 100,
-  user_id: rain[:id],
-  image_url: "https://images.unsplash.com/photo-1483201811930-882b8be091e0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80"
+  about: "Come have brunch with fellow queers. Feed yourself, treat yourself, 
+    and build community",
+  num_tickets: 15,
+  user_id: mckenna[:id],
+  image_url: "https://images.unsplash.com/photo-1495214783159-3503fd1b572d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
 )
 
 d = Event.create!(
-  title: "Dance the Night Away",
-  age: 21,
+  title: "Sunset picnic",
+  age: 18,
   price: 15,
-  num_tickets: 300,
-  about: "Come dance all night with us at our little slice of heaven. Snacks 
-    and non-alcoholic beverages provided.",
-  venue_name: "Narnia",
-  address: "521 Eastern Parkway",
-  city: "Brooklyn",
+  num_tickets: 30,
+  about: "Come hike a beautiful pass, ending on an overlook with a great view 
+    of the Hudson valley and the Hudson river. Food will be provided. Please 
+    bring a flashlight for the hike back down. Price does not include train ticket.",
+  venue_name: "Harlem 125 Station",
+  address: "128 Dr Martin Luther King Jr. blvd",
+  city: "Harlem",
   state: "NY",
-  zip: "11216",
+  zip: "10035",
   country: "United States of America",
-  start_time: Time.parse("22:00"),
-  end_time: Time.parse("04:00"),
-  start_date: Date.parse("November 14 2019"),
-  end_date: Date.parse("November 15 2019"),
+  start_time: Time.parse("15:00"),
+  end_time: Time.parse("20:00"),
+  start_date: Date.parse("May 14 2019"),
+  end_date: Date.parse("May 14 2019"),
   user_id: rain[:id],
-  image_url: "https://images.unsplash.com/photo-1554015157-e88b89214f7e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+  image_url: "https://images.unsplash.com/photo-1464207687429-7505649dae38?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80"
 )
 
 e = Event.create!(
-  title: "Beach Festival",
-  age: 21,
-  price: 150,
-  num_tickets: 3000,
-  about: "Come dance all night with us at our little slice of heaven. Snacks 
-    and non-alcoholic beverages provided.",
-  venue_name: "Riche Beach",
-  address: "521 Eastern Parkway",
-  city: "Brooklyn",
+  title: "Upstate Camping",
+  age: 18,
+  price: 100,
+  num_tickets: 20,
+  about: "We will be taking the train upstate to camp for the weekend. Price 
+    includes train ticket, food for the weekend, and other camping necessities. 
+    Please bring your own sleeping bag and anything else you need to feel 
+    comfortable.",
+  venue_name: "Harlem 125 Station",
+  address: "128 Dr Martin Luther King Jr. blvd",
+  city: "Harlem",
   state: "NY",
-  zip: "11216",
+  zip: "10035",
   country: "United States of America",
-  start_time: Time.parse("22:00"),
-  end_time: Time.parse("04:00"),
-  start_date: Date.parse("May 14 2019"),
-  end_date: Date.parse("May 16 2019"),
-  user_id: rain[:id], 
-  image_url: "https://images.unsplash.com/photo-1550393763-e826a44bf2b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1778&q=80"
+  start_time: Time.parse("16:00"),
+  end_time: Time.parse("16:00"),
+  start_date: Date.parse("July 23 2019"),
+  end_date: Date.parse("July 25 2019"),
+  user_id: kel[:id], 
+  image_url: "https://images.unsplash.com/photo-1520962880247-cfaf541c8724?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80"
 )
 
 f = Event.create!(
@@ -163,10 +167,10 @@ f = Event.create!(
   end_date: Date.parse("April 7 2019"),
   start_time: Time.parse("22:00"),
   end_time: Time.parse("4:00"),
-  age: 21,
-  price: 20,
-  venue_name: "Founders Lab, NYC",
-  address: "28 Montrose st",
+  age: 18,
+  price: 0,
+  venue_name: "Narnia",
+  address: "521 Eastern Parkway",
   city: "Brooklyn",
   state: "New York",
   country: "United States of America",
@@ -175,6 +179,71 @@ f = Event.create!(
   num_tickets: 100,
   user_id: rain[:id],
   image_url: "https://images.unsplash.com/photo-1483201811930-882b8be091e0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80"
+)
+
+g = Event.create!(
+  title: "Families Belong Together - Benefit Show",
+  start_date: Date.parse("August 6 2019"),
+  end_date: Date.parse("August 7 2019"),
+  start_time: Time.parse("22:00"),
+  end_time: Time.parse("4:00"),
+  age: 21,
+  price: 30,
+  venue_name: "Founders Lab, NYC",
+  address: "28 Montrose st",
+  city: "Brooklyn",
+  state: "New York",
+  country: "United States of America",
+  zip: 11116,
+  about: "Come dance to fresh beats and spend your money on raffel items from some 
+    of NYC's most ethically focused bussinesses and brands. Seperating families is
+    a crime against humanity and we are here to raise money in order to reunite as 
+    many as possible. If you do nothing, you are a part of the problem.",
+  num_tickets: 100,
+  user_id: haley[:id],
+  image_url: "https://images.unsplash.com/photo-1524606625607-19a826875531?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+)
+
+h = Event.create!(
+  title: "Full Moon Fiesta",
+  start_date: Date.parse("April 16 2019"),
+  end_date: Date.parse("April 17 2019"),
+  start_time: Time.parse("22:00"),
+  end_time: Time.parse("4:00"),
+  age: 21,
+  price: 15,
+  venue_name: "Founders Lab, NYC",
+  address: "28 Montrose st",
+  city: "Brooklyn",
+  state: "New York",
+  country: "United States of America",
+  zip: 11116,
+  about: "Come celebrate the full moon with dance and ritual. There will be a great 
+    DJ as well as on site tarot card readings and mini herbal tea consultations.",
+  num_tickets: 100,
+  user_id: mckenna[:id],
+  image_url: "https://images.unsplash.com/photo-1502351799375-da153b6e80f6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+)
+
+i = Event.create!(
+  title: "New fashion, Fashion Show",
+  start_date: Date.parse("June 6 2019"),
+  end_date: Date.parse("June 7 2019"),
+  start_time: Time.parse("22:00"),
+  end_time: Time.parse("4:00"),
+  age: 21,
+  price: 30,
+  venue_name: "Founders Lab, NYC",
+  address: "28 Montrose st",
+  city: "Brooklyn",
+  state: "New York",
+  country: "United States of America",
+  zip: 11116,
+  about: "The night will kick off with a runway show by designer, Moona Marie, 
+    and will evolve into a full on party. This is a night you aren't going to want to miss.",
+  num_tickets: 100,
+  user_id: haley[:id],
+  image_url: "https://images.unsplash.com/photo-1493655430214-3dd7718460bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
 )
 
 
