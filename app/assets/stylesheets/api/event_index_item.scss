@@ -1,0 +1,35 @@
+.event-index-item {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  height: 300px;
+  width: 30%;
+}
+
+.event-item-padding-and-shaddow {
+  padding: 16px;
+  
+  &:hover {
+    box-shadow: 1px, 1px, 1px, 1px, grey;
+  }
+}
+
+.index-item-event-image-container {
+  height: 200px;
+  width: 100%;
+  min-height: 200px;
+  overflow: hidden;
+}
+
+.index-item-event-image {
+  width: 100%;
+  height: auto;
+}
+
+.index-item-padding-and-shaddow {
+  width: 100%;
+}
+
+.event-index-item-click {
+  width: 100%;
+}

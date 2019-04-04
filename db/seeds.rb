@@ -23,6 +23,7 @@ demo = User.create!(
 rain = User.create!(
   email: "rainrues@gmail.com",
   password: "password",
+
   first_name: "Rain",
   last_name: "Rues"
 )
@@ -69,7 +70,8 @@ a = Event.create!(
   end_time: Time.parse("04:00"),
   start_date: Date.parse("November 14 2019"),
   end_date: Date.parse("November 15 2019"),
-  user_id: rain[:id]
+  user_id: rain[:id],
+  image_url: "https://images.unsplash.com/photo-1554015157-e88b89214f7e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
 )
 
 b = Event.create!(
@@ -89,11 +91,12 @@ b = Event.create!(
   end_time: Time.parse("04:00"),
   start_date: Date.parse("May 14 2019"),
   end_date: Date.parse("May 16 2019"),
-  user_id: rain[:id] 
+  user_id: rain[:id], 
+  image_url: "https://images.unsplash.com/photo-1550393763-e826a44bf2b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1778&q=80"
 )
 
 c = Event.create!(
-  title: "Birthday Dance Party",
+  title: "Birthday Party",
   start_date: Date.parse("April 6 2019"),
   end_date: Date.parse("April 7 2019"),
   start_time: Time.parse("22:00"),
@@ -108,7 +111,70 @@ c = Event.create!(
   zip: 11116,
   about: "A night to celebrate, dance, and bring in my new year",
   num_tickets: 100,
-  user_id: rain[:id]
+  user_id: rain[:id],
+  image_url: "https://images.unsplash.com/photo-1483201811930-882b8be091e0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80"
+)
+
+d = Event.create!(
+  title: "Dance the Night Away",
+  age: 21,
+  price: 15,
+  num_tickets: 300,
+  about: "Come dance all night with us at our little slice of heaven. Snacks 
+    and non-alcoholic beverages provided.",
+  venue_name: "Narnia",
+  address: "521 Eastern Parkway",
+  city: "Brooklyn",
+  state: "NY",
+  zip: "11216",
+  country: "United States of America",
+  start_time: Time.parse("22:00"),
+  end_time: Time.parse("04:00"),
+  start_date: Date.parse("November 14 2019"),
+  end_date: Date.parse("November 15 2019"),
+  user_id: rain[:id],
+  image_url: "https://images.unsplash.com/photo-1554015157-e88b89214f7e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+)
+
+e = Event.create!(
+  title: "Beach Festival",
+  age: 21,
+  price: 150,
+  num_tickets: 3000,
+  about: "Come dance all night with us at our little slice of heaven. Snacks 
+    and non-alcoholic beverages provided.",
+  venue_name: "Riche Beach",
+  address: "521 Eastern Parkway",
+  city: "Brooklyn",
+  state: "NY",
+  zip: "11216",
+  country: "United States of America",
+  start_time: Time.parse("22:00"),
+  end_time: Time.parse("04:00"),
+  start_date: Date.parse("May 14 2019"),
+  end_date: Date.parse("May 16 2019"),
+  user_id: rain[:id], 
+  image_url: "https://images.unsplash.com/photo-1550393763-e826a44bf2b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1778&q=80"
+)
+
+f = Event.create!(
+  title: "Birthday Party",
+  start_date: Date.parse("April 6 2019"),
+  end_date: Date.parse("April 7 2019"),
+  start_time: Time.parse("22:00"),
+  end_time: Time.parse("4:00"),
+  age: 21,
+  price: 20,
+  venue_name: "Founders Lab, NYC",
+  address: "28 Montrose st",
+  city: "Brooklyn",
+  state: "New York",
+  country: "United States of America",
+  zip: 11116,
+  about: "A night to celebrate, dance, and bring in my new year",
+  num_tickets: 100,
+  user_id: rain[:id],
+  image_url: "https://images.unsplash.com/photo-1483201811930-882b8be091e0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80"
 )
 
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import EventIndex from '../Events/event_index_container';
 import { Link } from 'react-router-dom';
 
 const Greeting = ({logout}) => {
@@ -16,6 +17,7 @@ const Greeting = ({logout}) => {
         <div>
           <img id="splashimage-1" src={window.splashImageURL} alt="Do more of what you love"/>
         </div>
+
         <form id="splash-page-search-bar">
           <div className="splash-page-search-item" id="splash-page-looking-for">
             <div><p>Looking for</p></div>
@@ -41,6 +43,9 @@ const Greeting = ({logout}) => {
             </button>
           </div>
         </form>
+      <div id="master-box-for-event-index">
+        <EventIndex />
+      </div>
       </div>
     )
   }

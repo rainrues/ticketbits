@@ -10,7 +10,8 @@
   min-height: 100px;
   flex-wrap: nowrap;
   width: 85%;
-  // top: -100px;
+  position: relative;
+  top: -53px;
   max-width: 1200px;
   justify-content: space-between;
   font-family: Neue Plak,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
@@ -66,4 +67,9 @@
 
 #splash-page-in {
   border-right: 1px solid #ffffff;
+}
+
+#master-box-for-event-index {
+  position: absolute;
+  width: 100%;
 }

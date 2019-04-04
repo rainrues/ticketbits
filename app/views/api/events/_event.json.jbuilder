@@ -20,37 +20,26 @@ json.extract! event, :id,
                      :user_id
 
 
+json.start_time_object do
+  json.hour event.start_time.hour
+  json.minute event.start_time.min
+end
 
+json.end_time_object do
+  json.hour event.start_time.hour
+  json.minute event.start_time.min
+end
 
+json.start_date_object do
+  json.year event.start_date.year
+  json.month event.start_date.month
+  json.date event.start_date.day
+end
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                      # TESTING
-# json.start_time_obj do
-#   json.hour event.start_time.hour
-#   json.minute event.start_time.min
-# end
-
-
-# json.start_date_obj do
-#   json.year event.start_date.year
-#   json.month event.start_date.month
-#   json.date event.start_date.day
-#   json.cwday event.start_date.cwday
-# end
+json.end_date_object do
+  json.year event.start_date.year
+  json.month event.start_date.month
+  json.date event.start_date.day
+end
 
 # json.photoUrl url_for(event.photo) if event.photo.attached?
