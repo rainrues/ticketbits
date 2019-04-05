@@ -1,24 +1,36 @@
-# README
+# TicketBits
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Welcome to [TicketBits](https://ticketbits.herokuapp.com/), a single-page clone of [EventBrite](https://www.eventbrite.com/). TicketBits is a website for browsing events, creating events, and buying tickets for events.
 
-Things you may want to cover:
+### Technologies
+TicketBits uses React, Redux, and ES6 to dynamically generate the frontend, and Ruby on Rails for data management on the backend.
 
-* Ruby version
+## Features
 
-* System dependencies
++ Responsive signin page that will send you to sign up or sign in based on the email you input. 
+![sign in](https://drive.google.com/open?id=1Hu-ljBUToLqsWFuIoxms1WABWVmBHdqC)
 
-* Configuration
+### User Authentication
+Users can securely sign up, log in, and log out simply by setting an email address and password for their account.
+Users who are signed in can access different features via the nav bar.
 
-* Database creation
+![signed out](https://drive.google.com/open?id=1cC6kveSkqSLdvwiSgSHT4z7HwMaGA07j)
+![signed in](https://drive.google.com/open?id=10efhaoIxYxsLII1MPnUO6hh2ElGVodTl)
 
-* Database initialization
+### Structure
+TicketBits' main components are as follows:
 
-* How to run the test suite
+1. NavBar
+  - Main navigation for the application
+2. Splash Page
+  - Includes banner image
+  - Includes search bar
+  - Shows all events
 
-* Services (job queues, cache servers, search engines, etc.)
+#### Future Features
 
-* Deployment instructions
-
-* ...
+1. Styled Event Creation Form
+2. Search
+3. Categories
+4. Liking Events
+5. Event Browse page
