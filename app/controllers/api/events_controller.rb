@@ -1,5 +1,5 @@
 class Api::EventsController < ApplicationController
-    before_action :require_login, only: [:create, :update]
+    # before_action :require_login, only: [:create, :update]
 
     def index
         @events = Event.all
