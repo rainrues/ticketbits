@@ -1,10 +1,11 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import Footer from '../Footer/footer';
 
 class EventShow extends React.Component {
   constructor(props) {
     super(props);
-    // this.state = this.props.event;
+    this.state = {event: this.props.event};
     this.formatDate = this.formatDate.bind(this);
     this.setMonth = this.setMonth.bind(this);
     this.setTime = this.setTime.bind(this);
@@ -84,7 +85,7 @@ class EventShow extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchEvent(this.props.match.params.eventId);
+    this.props.fetchEvent(this.props.match.params.eventId).then( response => this.setState({event: response}));
   }
 
   render() {
@@ -97,40 +98,12 @@ class EventShow extends React.Component {
     }
 
     return (
-      <div className="event-index-item">
-        <div className="index-item-shaddow">
-          <div className="index-item-click" onClick={this.handleClick}>
-            <div className="index-item-event-image-container">
-              <img className="index-item-event-image" src={this.props.event.image_url} alt="event image" />
-            </div>
-            <div>
-              <button className="event-price">{this.props.event.price}</button>
-            </div>
-          </div>
-          <div className="event-item-middle">
-            <div className="event-middle-actions">
-              <button className="event-middle-button"><i className="fas fa-arrow-up fa-lg"></i></button>
-              <button className="event-middle-button"><i className="far fa-heart fa-lg"></i></button>
-            </div>
-          </div>
-          <div className="index-item-bottom-section">
-            <div className="bottom-section-left">
-              <p className="bottom-section-left-month">{this.setMonth("startDate")}</p>
-              <p className="bottom-section-left-day">{this.props.event.start_date_object.date}</p>
-            </div>
-            <div className="event-info">
-              <h2 className="event-title">{this.props.event.title}</h2>
-              <div className="bottom-section-small-text">
-                <time className="event-time">{this.formatDate("startDate")}</time>
-                <div className="event-location">
-                  {this.props.event.venue_name}, {this.props.event.city}
-                </div>
-                <div>{this.props.event.price}</div>
-              </div>
-            </div>
-          </div>
+      <div id="event-show">
+        
+
+        <div>
+          <Footer />
         </div>
-        <p>{this.props.event.about}</p>
       </div>
     )
   }

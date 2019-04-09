@@ -1,25 +1,35 @@
 .event-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   font-family: Neue Plak,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
 }
 
 .event-create-topmost-bar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  height: 108px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 #create-an-event-text {
   color: #1e0a3c;
-  font-weight: 400;
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-weight: 350;
+  font-size: 24px;
 }
 
-.create-an-event-submit-button {
+.event-create-submit-button {
   background-color: #d0410b;
   color: #ffffff;
   height: 44px;
   width: 118px;
   border-radius: 5px;
+  font-size: 16px;
+  font-weight: 350;
+  margin-right: 44px;
 }
 
 .create-event-header-bar {
@@ -28,10 +38,97 @@
   width: 100%;
 }
 
+#event-form-main-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 870px;
+  height: 1533px;
+  margin-bottom: 55px;
+}
+
 .form-section-header {
-  border-bottom: 1px solid 
+  display: flex;
+  border-bottom: 1px solid #dcdae3;
 }
 
 .form-section-number {
   background-color: #3659E3;
+  color: #ffffff;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 33px;
+  margin-top: 20px;
+}
+
+.form-section-title {
+  color: #39354f;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 5px 0px 10px;
+}
+
+.form-section-tips {
+  color: #3659e4;
+  display: flex;
+  align-items: center;
+  padding: 20px 5px 0px 10px;
+  position: relative;
+  right: -646px;
+}
+
+.form-input-item-container {
+
+}
+
+.create-event-form-input-headings {
+  color: #1e0a3c;
+  font-size: 15px;
+  margin-bottom: 13px;
+}
+
+.create-event-form-input {
+  width: 690px;
+  height: 50px;
+  padding: 9px 12px;
+  box-sizing: border-box;
+}
+
+.create-event-form-input-small {
+  height: 50px;
+  padding: 9px 12px;
+  box-sizing: border-box;
+  width: 333px;
+}
+
+.form-two-per-line-formatting {
+  display: flex;
+  justify-content: space-between;
+  width: 689px;
+}
+
+.event-form-start-end-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 150px;
+}
+
+.event-form-location-inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 350px;
+}
+
+#event-form-photo-instructions {
+  right: 8px;
+  font-size: 13px;
+  padding-top: 10px;
 }
