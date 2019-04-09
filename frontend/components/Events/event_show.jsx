@@ -5,7 +5,7 @@ import Footer from '../Footer/footer';
 class EventShow extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {event: this.props.event};
+    this.state = this.props.event;
     this.formatDate = this.formatDate.bind(this);
     this.setMonth = this.setMonth.bind(this);
     this.setTime = this.setTime.bind(this);
@@ -28,9 +28,9 @@ class EventShow extends React.Component {
     };
 
     if (field === "startDate") {
-      return months[this.props.event.start_date_object.month];
+      return months[this.state.start_date_object.month];
     } else {
-      return months[this.props.event.end_date_object.month];
+      return months[this.state.end_date_object.month];
     }
   }
 
@@ -40,36 +40,36 @@ class EventShow extends React.Component {
     let period = "";
 
     if (field === "startTime") {
-      if (this.props.event.start_time_object.hour > 12) {
-        hour = `${this.props.event.start_time_object.hour - 12}`;
+      if (this.state.start_time_object.hour > 12) {
+        hour = `${this.state.start_time_object.hour - 12}`;
         period = "PM";
-      } else if (this.props.event.start_time_object.hour === 0) {
+      } else if (this.state.start_time_object.hour === 0) {
         hour = "12";
         period = "AM";
       } else {
-        hour = `${this.props.event.start_time_object.hour}`;
+        hour = `${this.state.start_time_object.hour}`;
         period = "AM";
       }
-      if (this.props.event.start_time_object.minute < 10) {
-        min = `0${this.props.event.start_time_object.minute}`;
+      if (this.state.start_time_object.minute < 10) {
+        min = `0${this.state.start_time_object.minute}`;
       } else {
-        min = `${this.props.event.start_time_object.minute}`;
+        min = `${this.state.start_time_object.minute}`;
       }
     } else {
-      if (this.props.event.end_time_object.hour > 12) {
-        hour = `${this.props.event.end_time_object.hour - 12}`;
+      if (this.state.end_time_object.hour > 12) {
+        hour = `${this.state.end_time_object.hour - 12}`;
         period = "PM";
-      } else if (this.props.event.end_time_object.hour === 0) {
+      } else if (this.state.end_time_object.hour === 0) {
         hour = "12";
         period = "AM";
       } else {
-        hour = `${this.props.event.end_time_object.hour}`;
+        hour = `${this.state.end_time_object.hour}`;
         period = "AM";
       }
-      if (this.props.event.end_time_object.minute < 10) {
-        min = `0${this.props.event.end_time_object.minute}`;
+      if (this.state.end_time_object.minute < 10) {
+        min = `0${this.state.end_time_object.minute}`;
       } else {
-        min = `${this.props.event.end_time_object.minute}`;
+        min = `${this.state.end_time_object.minute}`;
       }
     }
 
@@ -78,28 +78,30 @@ class EventShow extends React.Component {
 
   formatDate(field) {
     if (field === "startDate") {
-      return `${this.setMonth("startDate")} ${this.props.event.start_date_object.date}, ${this.setTime("startTime")}`;
+      return `${this.setMonth("startDate")} ${this.state.start_date_object.date}, ${this.setTime("startTime")}`;
     } else {
-      return `${this.setMonth("endDate")} ${this.props.event.end_date_object.date}, ${this.setTime("endTime")}`;
+      return `${this.setMonth("endDate")} ${this.state.end_date_object.date}, ${this.setTime("endTime")}`;
     }
   }
 
   componentDidMount() {
-    this.props.fetchEvent(this.props.match.params.eventId).then( response => this.setState({event: response}));
+    if (!this.state) {
+      this.props.fetchEvent(this.props.match.params.eventId).then( event => this.setState({event: event.event}));
+    }
   }
 
   render() {
-    if (!this.props.event) {
+    if (!this.state) {
       return null;
     }
-
-    if (this.props.event.price === 0) {
-      this.props.event.price = "Free";
+    debugger;
+    if (this.state.price === 0) {
+      this.setState(this.props.event.price = "Free");
     }
 
     return (
       <div id="event-show">
-        
+        <div>{this.state.event.title}</div>
 
         <div>
           <Footer />
