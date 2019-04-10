@@ -5,7 +5,7 @@ import Footer from '../Footer/footer';
 class EventShow extends React.Component {
   constructor(props) {
     super(props);
-    this.state = this.props.event;
+    this.state = {event: this.props.event};
     this.formatDate = this.formatDate.bind(this);
     this.setMonth = this.setMonth.bind(this);
     this.setTime = this.setTime.bind(this);
@@ -28,9 +28,9 @@ class EventShow extends React.Component {
     };
 
     if (field === "startDate") {
-      return months[this.state.start_date_object.month];
+      return months[this.state.event.start_date_object.month];
     } else {
-      return months[this.state.end_date_object.month];
+      return months[this.state.event.end_date_object.month];
     }
   }
 
@@ -40,36 +40,36 @@ class EventShow extends React.Component {
     let period = "";
 
     if (field === "startTime") {
-      if (this.state.start_time_object.hour > 12) {
-        hour = `${this.state.start_time_object.hour - 12}`;
+      if (this.state.event.start_time_object.hour > 12) {
+        hour = `${this.state.event.start_time_object.hour - 12}`;
         period = "PM";
-      } else if (this.state.start_time_object.hour === 0) {
+      } else if (this.state.event.start_time_object.hour === 0) {
         hour = "12";
         period = "AM";
       } else {
-        hour = `${this.state.start_time_object.hour}`;
+        hour = `${this.state.event.start_time_object.hour}`;
         period = "AM";
       }
-      if (this.state.start_time_object.minute < 10) {
-        min = `0${this.state.start_time_object.minute}`;
+      if (this.state.event.start_time_object.minute < 10) {
+        min = `0${this.state.event.start_time_object.minute}`;
       } else {
-        min = `${this.state.start_time_object.minute}`;
+        min = `${this.state.event.start_time_object.minute}`;
       }
     } else {
-      if (this.state.end_time_object.hour > 12) {
-        hour = `${this.state.end_time_object.hour - 12}`;
+      if (this.state.event.end_time_object.hour > 12) {
+        hour = `${this.state.event.end_time_object.hour - 12}`;
         period = "PM";
-      } else if (this.state.end_time_object.hour === 0) {
+      } else if (this.state.event.end_time_object.hour === 0) {
         hour = "12";
         period = "AM";
       } else {
-        hour = `${this.state.end_time_object.hour}`;
+        hour = `${this.state.event.end_time_object.hour}`;
         period = "AM";
       }
-      if (this.state.end_time_object.minute < 10) {
-        min = `0${this.state.end_time_object.minute}`;
+      if (this.state.event.end_time_object.minute < 10) {
+        min = `0${this.state.event.end_time_object.minute}`;
       } else {
-        min = `${this.state.end_time_object.minute}`;
+        min = `${this.state.event.end_time_object.minute}`;
       }
     }
 
@@ -85,23 +85,61 @@ class EventShow extends React.Component {
   }
 
   componentDidMount() {
-    if (!this.state) {
+    if (!this.state.event) {
       this.props.fetchEvent(this.props.match.params.eventId).then( event => this.setState({event: event.event}));
     }
+    scrollTo(0, 0);
   }
 
   render() {
-    if (!this.state) {
+    if (!this.state.event) {
       return null;
     }
-    debugger;
+  
     if (this.state.price === 0) {
       this.setState(this.props.event.price = "Free");
     }
-
+  // THIS NEEDS TO BE CHANGED NOT GOOD PRACTICE TO CHANGE PROPS (CHANGE ELSEWHERE TOO)
     return (
       <div id="event-show">
-        <div>{this.state.event.title}</div>
+        <div id="event-show-background-image-container">
+          <img id="event-show-background-image" src={this.state.event.image_url} alt="event image" />
+        </div>
+
+        <main id="event-show-main-body">
+          <section id="event-show-main-body-top">
+            <div id="event-show-top-image-container">
+              <img id="event-show-top-image" src={this.state.event.image_url} alt="event image" />
+            </div>
+            <div id="event-show-main-body-top-right">
+              <div id="event-show-main-body-top-right-top">
+                <div id="event-show-top-date">
+                  <p id="event-show-top-month">{this.setMonth("startDate")}</p>  
+                  <p id="event-show-top-day">{this.state.event.start_date_object.date}</p>
+                </div>
+                <div id="event-show-top-classification">
+                  <p id="event-show-top-title">{this.state.event.title}</p>
+                  <p id="event-show-top-producer">by User Number {this.state.event.user_id}</p>
+                </div>
+              </div>
+              <div>
+                <p id="event-show-top-price">{this.state.event.price}</p>
+              </div>
+            </div>
+          </section>
+
+          <section id="event-show-sticky-bar">
+            <div>
+              <button className="event-show-middle-button"><i className="fas fa-arrow-up fa-lg"></i></button>
+              <button className="event-show-middle-button"><i className="far fa-heart fa-lg"></i></button>
+            </div>
+            <form>
+              <button id="event-show-resister-button">Register</button>
+            </form>
+          </section>
+          <p id="event-show-description-heading">Description</p>
+          <p id="event-show-description">{this.state.event.about}</p>
+        </main>
 
         <div>
           <Footer />
