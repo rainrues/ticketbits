@@ -33,7 +33,7 @@ class EventShow extends React.Component {
       return months[this.state.event.end_date_object.month];
     }
   }
-
+   
   setTime(field) {
     let hour = "";
     let min = "";
