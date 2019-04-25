@@ -10,6 +10,7 @@ import SignupFormContainer from './Greeting/signup_form_container';
 import NavBar from './Navbar/navbar_container';
 import EventShowContainer from './Events/event_show_container';
 import CreateEventContainer from './Events/create_event_container';
+import BrowseContainer from './Browse/browse_container';
 
 const App = () => (
   <div>
@@ -18,6 +19,7 @@ const App = () => (
     </header>
 
     <Route exact path="/" component={GreetingContainer} />
+    <Route exact path="/events" component={BrowseContainer} />
     <AuthRoute exact path="/getStarted" component={EntryContainer} />
     <AuthRoute exact path="/login" component={LoginFormContainer} />
     <AuthRoute exact path="/signup" component={SignupFormContainer} />

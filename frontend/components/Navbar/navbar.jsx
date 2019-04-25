@@ -14,7 +14,7 @@ const NavBar = (props) => {
         {/* </div> */}
 
         <section id="navbar-right">
-          <Link  className="navbar-item" id="browse-events-navbar" to='/'>Browse Events</Link>
+          <Link  className="navbar-item" id="browse-events-navbar" to='/events'>Browse Events</Link>
           <Link className="navbar-item" id="organize-navbar" to="#">Organize</Link>
           <Link className="navbar-item" id="help-navbar" to="#">Help</Link>
           <Link  className="navbar-item" id="create-event-navbar" to='/events/new'>Create Event</Link>
@@ -39,7 +39,7 @@ const NavBar = (props) => {
         {/* </div> */}
 
         <section id="navbar-right">
-          <Link  className="navbar-item" id="browse-events-navbar" to='/'>Browse Events</Link>
+          <Link  className="navbar-item" id="browse-events-navbar" to='/events'>Browse Events</Link>
           <Link className="navbar-item" id="help-navbar" to="#">Help</Link>
 
           <Link className="navbar-item" id="signin-navbar" to='/getStarted'>Sign In</Link>
