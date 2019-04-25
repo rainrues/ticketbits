@@ -23,7 +23,7 @@ const App = () => (
     <AuthRoute exact path="/signup" component={SignupFormContainer} />
     <Switch>
       <ProtectedRoute exact path="/events/new" component={CreateEventContainer} />
-      <ProtectedRoute exact path="/events/:eventId" component={EventShowContainer} />
+      <Route exact path="/events/:eventId" component={EventShowContainer} />
     </Switch>
 
     <footer>
