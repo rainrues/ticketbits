@@ -2,6 +2,8 @@
 
 Welcome to [TicketBits](https://ticketbits.herokuapp.com/), a single-page clone of [EventBrite](https://www.eventbrite.com/). TicketBits is a website for browsing events, creating events, and buying tickets for events.
 
+Homepage has been updated since cloning. To see original copied page go to: https://web.archive.org/web/20190417003843/https://www.eventbrite.com/
+
 ### Technologies
 TicketBits uses React, Redux, and ES6 to dynamically generate the frontend, and Ruby on Rails for data management on the backend.
 
