@@ -21,8 +21,11 @@
   position: relative;
   bottom: 602px;
   background-color: #ffffff;
-  z-index: 2;
+  z-index: 2; 
   border-radius: 3px;
+  box-shadow: #e5e5e7;
+  outline: 1px solid #e5e5e7;
+  overflow: hidden;
   // color: blue;
   font-family: Neue Plak,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
 }

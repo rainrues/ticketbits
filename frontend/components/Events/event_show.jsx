@@ -88,6 +88,11 @@ class EventShow extends React.Component {
     if (!this.state.event) {
       this.props.fetchEvent(this.props.match.params.eventId).then( event => this.setState({event: event.event}));
     }
+
+    if (this.state.event) {
+      this.props.fetchUser(this.props.event.user_id).then(user => this.setState({ user: user.user }));
+    }
+
     scrollTo(0, 0);
   }
 
