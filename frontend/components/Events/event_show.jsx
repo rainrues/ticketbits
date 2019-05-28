@@ -96,9 +96,6 @@ class EventShow extends React.Component {
       return null;
     }
   
-    if (this.state.price === 0) {
-      this.setState(this.props.event.price = "Free");
-    }
   // THIS NEEDS TO BE CHANGED NOT GOOD PRACTICE TO CHANGE PROPS (CHANGE ELSEWHERE TOO)
     return (
       <div id="event-show">
@@ -119,11 +116,11 @@ class EventShow extends React.Component {
                 </div>
                 <div id="event-show-top-classification">
                   <p id="event-show-top-title">{this.state.event.title}</p>
-                  <p id="event-show-top-producer">by User Number {this.state.event.user_id}</p>
+                  <p id="event-show-top-producer">by {this.state.event.first_name} {this.state.event.last_name}</p>
                 </div>
               </div>
               <div>
-                <p id="event-show-top-price">{this.state.event.price}</p>
+                <p id="event-show-top-price">{this.state.event.price || "Free"}</p>
               </div>
             </div>
           </section>
@@ -137,8 +134,18 @@ class EventShow extends React.Component {
               <button id="event-show-resister-button">Register</button>
             </form>
           </section>
-          <p id="event-show-description-heading">Description</p>
-          <p id="event-show-description">{this.state.event.about}</p>
+
+          <section id="event-show-additional-info">
+            <div id="event-show-additional-info-left">
+              <p class="event-show-heading">Description</p>
+              <p class="event-show-description-general">{this.state.event.about}</p>
+            </div>
+            <div id="event-show-additional-info-right">
+              <p class="event-show-heading">Date and Time</p>
+              <p class="event-show-heading">Location</p>
+              <p class="event-show-heading">Refund Policy</p>
+            </div>
+          </section>
         </main>
 
         <div>

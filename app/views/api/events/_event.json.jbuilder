@@ -19,7 +19,6 @@ json.extract! event, :id,
                      :end_date,
                      :user_id
 
-
 json.start_time_object do
   json.hour event.start_time.hour
   json.minute event.start_time.min

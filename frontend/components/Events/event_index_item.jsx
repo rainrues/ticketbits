@@ -89,9 +89,6 @@ class EventIndexItem extends React.Component {
   }
 
   render() {
-    if (this.state.price === 0 ) {
-      this.setState({price: "Free"});
-    }
 
     return (
       <div className="event-index-item">
@@ -101,7 +98,7 @@ class EventIndexItem extends React.Component {
               <img className="index-item-event-image" src={this.state.image_url} alt="event image"/>
             </div>
             <div>
-              <button className="event-price">{this.state.price}</button>
+              <button className="event-price">{this.state.price || "Free"}</button>
             </div>
           </div>
           <div className="event-item-middle">
@@ -122,7 +119,7 @@ class EventIndexItem extends React.Component {
                 <div className="event-location">
                   {this.state.venue_name}, {this.state.city}
                 </div>
-                <div>{this.state.price}</div>
+                <div>{this.state.price || "Free"}</div>
               </div>
             </div>
           </div>
