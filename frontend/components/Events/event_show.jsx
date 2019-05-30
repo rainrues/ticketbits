@@ -78,16 +78,15 @@ class EventShow extends React.Component {
 
   formatDate(field) {
     if (field === "startDate") {
-      return `${this.setMonth("startDate")} ${this.state.start_date_object.date}, ${this.setTime("startTime")}`;
+      return `${this.setMonth("startDate")} ${this.state.event.start_date_object.date}, ${this.state.event.start_date_object.year}`;
     } else {
-      return `${this.setMonth("endDate")} ${this.state.end_date_object.date}, ${this.setTime("endTime")}`;
+      return `${this.setMonth("endDate")} ${this.state.event.end_date_object.date}, ${this.state.event.end_date_object.year}`;
     }
   }
 
   componentDidMount() {
-    if (!this.state.event) {
-      this.props.fetchEvent(this.props.match.params.eventId).then( event => this.setState({event: event.event}));
-    }
+    this.props.fetchEvent(this.props.match.params.eventId).then( event => this.setState({event: event.event}));
+    
     scrollTo(0, 0);
   }
 
@@ -120,30 +119,39 @@ class EventShow extends React.Component {
                 </div>
               </div>
               <div>
-                <p id="event-show-top-price">{this.state.event.price || "Free"}</p>
+                <p id="event-show-top-price">{(this.state.event.price) ? "$" : ""}{this.state.event.price || "Free"}</p>
               </div>
             </div>
           </section>
 
           <section id="event-show-sticky-bar">
-            <div>
+            <div id="event-show-middle-buttons">
               <button className="event-show-middle-button"><i className="fas fa-arrow-up fa-lg"></i></button>
               <button className="event-show-middle-button"><i className="far fa-heart fa-lg"></i></button>
             </div>
             <form>
-              <button id="event-show-resister-button">Register</button>
+              <button id="event-show-register-button">Register</button>
             </form>
           </section>
 
           <section id="event-show-additional-info">
             <div id="event-show-additional-info-left">
-              <p class="event-show-heading">Description</p>
-              <p class="event-show-description-general">{this.state.event.about}</p>
+              <p className="event-show-heading">Description</p>
+              <p className="event-show-description-general">{this.state.event.about}</p>
             </div>
             <div id="event-show-additional-info-right">
-              <p class="event-show-heading">Date and Time</p>
-              <p class="event-show-heading">Location</p>
-              <p class="event-show-heading">Refund Policy</p>
+              <div className="event-show-additional-info-right-subsection">
+                <p className="event-show-heading">Date and Time</p>
+                <date>{this.formatDate("startDate")} {(this.formatDate("endDate") === this.formatDate("startDate")) ? "" : `- ${this.formatDate("endDate")}`}</date>
+                {/* This is a problem. Both dates are showing up as same even though they should be two days apart */}
+                <time>{this.setTime("startTime")} - {this.setTime("endTime")}</time>
+              </div>
+              <div className="event-show-additional-info-right-subsection">
+                <p className="event-show-heading">Location</p>
+              </div>
+              <div className="event-show-additional-info-right-subsection">
+                <p className="event-show-heading">Refund Policy</p>
+              </div>
             </div>
           </section>
         </main>

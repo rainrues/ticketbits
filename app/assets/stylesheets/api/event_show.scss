@@ -16,13 +16,15 @@
 #event-show-main-body {
   width: 1080px;
   height: 100%;
-  height: 2000px;
+  // height: 2000px;
   margin: 0 auto;
   margin-bottom: 50px;
   position: relative;
   bottom: 602px;
+  padding-bottom: 50px;
   background-color: #ffffff;
   z-index: 2;
+  border-radius: 3px;
   box-shadow: 0 1px 2px 0 rgba(0,0,0,0.15);
   font-family: Neue Plak,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif;
 }
@@ -50,7 +52,7 @@
   width: 360px;
   height: 360px;
   border-radius: 3px;
-  background-color: #f7f0e6;
+  background-color: rgba(255,255,255,0.9);
   color: #1e0c3c;
 }
 
@@ -86,7 +88,7 @@
   line-height: 1.25em;
   letter-spacing: 2px;
   position: relative;
-  right: -4px;
+  right: -2.5px;
 }
 
 #event-show-top-title {
@@ -95,18 +97,20 @@
   font-size: 20px;
   line-height: 21px;
   letter-spacing: .5px;
+  margin-bottom: 18px;
 }
 
 #event-show-top-producer {
-  font-size: 16px;
+  font-size: 14px;
   color: #6F7287;
   letter-spacing: .5px;
 }
 
 #event-show-top-price {
+  font-size: 14px;
   position: relative;
   left: 28px;
-  top: 168px;
+  top: 170px;
   letter-spacing: .5px;
   color: #39364f;
 }
@@ -127,6 +131,12 @@
   margin: 0px 15px;
 }
 
+#event-show-middle-buttons {
+  display: flex;
+  width: 85px;
+  justify-content: space-between;
+}
+
 .event-show-middle-button {
   border-radius: 50%;
   height: 40px;
@@ -138,15 +148,18 @@
   }
 }
 
-#event-show-resister-button {
-  font-weight: 600;
+#event-show-register-button {
+  font-weight: 300;
+  font-size: 14px;
   color: #FFF;
   background-color: #0D8547;
   height: 44px;
+  width: 318px;
   border: 2px solid transparent;
   padding: 0 30px;
   font-size: 15px;
   border-radius: 4px;
+  margin-right: 6px;
 
   &:hover {
     cursor: pointer;
@@ -163,7 +176,17 @@
 }
 
 #event-show-additional-info-right {
-  min-width: 320px;
+  margin-top: 52px;
+  min-width: 333px;
+  display: flex;
+  justify-content: space-between;
+  min-height: 200px;
+  flex-direction: column;
+}
+
+.event-show-additional-info-right-subsection {
+  display: flex;
+  flex-direction: column;
 }
 
 .event-show-heading {
