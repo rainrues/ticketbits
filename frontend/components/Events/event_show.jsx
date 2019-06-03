@@ -142,15 +142,26 @@ class EventShow extends React.Component {
             <div id="event-show-additional-info-right">
               <div className="event-show-additional-info-right-subsection">
                 <p className="event-show-heading">Date and Time</p>
-                <date>{this.formatDate("startDate")} {(this.formatDate("endDate") === this.formatDate("startDate")) ? "" : `- ${this.formatDate("endDate")}`}</date>
-                {/* This is a problem. Both dates are showing up as same even though they should be two days apart */}
-                <time>{this.setTime("startTime")} - {this.setTime("endTime")}</time>
+                <div className="event-show-additional-info-right-subsection-subsection">
+                  <date className="event-show-right-subtext">{this.formatDate("startDate")} {(this.formatDate("endDate") === this.formatDate("startDate")) ? "" : `- ${this.formatDate("endDate")}`}</date>
+                  {/* This is a problem. Both dates are showing up as same even though they should be two days apart */}
+                  <time className="event-show-right-subtext">{this.setTime("startTime")} - {this.setTime("endTime")}</time>
+                </div>
               </div>
               <div className="event-show-additional-info-right-subsection">
                 <p className="event-show-heading">Location</p>
+                <div className="event-show-additional-info-right-subsection-subsection">
+                  <p className="event-show-right-subtext">{this.state.event.venue_name}</p>
+                  <p className="event-show-right-subtext">{this.state.event.address}</p>
+                  {/* <p className="event-show-right-subtext">{(address2) ? this.state.event.address2 : ""}</p> */}
+                  <p className="event-show-right-subtext">{this.state.event.city}, {this.state.event.state} {this.state.event.zip}</p>
+                </div>
               </div>
               <div className="event-show-additional-info-right-subsection">
                 <p className="event-show-heading">Refund Policy</p>
+                <div className="event-show-additional-info-right-subsection-subsection">
+                  <p className="event-show-right-subtext">No Refunds</p>
+                </div>
               </div>
             </div>
           </section>
