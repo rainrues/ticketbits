@@ -19,15 +19,14 @@ json.extract! event, :id,
                      :end_date,
                      :user_id
 
-
 json.start_time_object do
   json.hour event.start_time.hour
   json.minute event.start_time.min
 end
 
 json.end_time_object do
-  json.hour event.start_time.hour
-  json.minute event.start_time.min
+  json.hour event.end_time.hour
+  json.minute event.end_time.min
 end
 
 json.start_date_object do
@@ -37,9 +36,9 @@ json.start_date_object do
 end
 
 json.end_date_object do
-  json.year event.start_date.year
-  json.month event.start_date.month
-  json.date event.start_date.day
+  json.year event.end_date.year
+  json.month event.end_date.month
+  json.date event.end_date.day
 end
 
 # json.photoUrl url_for(event.photo) if event.photo.attached?

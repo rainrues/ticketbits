@@ -38,7 +38,6 @@ class EventShow extends React.Component {
     let hour = "";
     let min = "";
     let period = "";
-
     if (field === "startTime") {
       if (this.state.event.start_time_object.hour > 12) {
         hour = `${this.state.event.start_time_object.hour - 12}`;
@@ -78,21 +77,15 @@ class EventShow extends React.Component {
 
   formatDate(field) {
     if (field === "startDate") {
-      return `${this.setMonth("startDate")} ${this.state.start_date_object.date}, ${this.setTime("startTime")}`;
+      return `${this.setMonth("startDate")} ${this.state.event.start_date_object.date}, ${this.state.event.start_date_object.year}`;
     } else {
-      return `${this.setMonth("endDate")} ${this.state.end_date_object.date}, ${this.setTime("endTime")}`;
+      return `${this.setMonth("endDate")} ${this.state.event.end_date_object.date}, ${this.state.event.end_date_object.year}`;
     }
   }
 
   componentDidMount() {
-    if (!this.state.event) {
-      this.props.fetchEvent(this.props.match.params.eventId).then( event => this.setState({event: event.event}));
-    }
-
-    if (this.state.event) {
-      this.props.fetchUser(this.props.event.user_id).then(user => this.setState({ user: user.user }));
-    }
-
+    this.props.fetchEvent(this.props.match.params.eventId).then( event => this.setState({event: event.event}));
+    
     scrollTo(0, 0);
   }
 
@@ -101,9 +94,6 @@ class EventShow extends React.Component {
       return null;
     }
   
-    if (this.state.price === 0) {
-      this.setState(this.props.event.price = "Free");
-    }
   // THIS NEEDS TO BE CHANGED NOT GOOD PRACTICE TO CHANGE PROPS (CHANGE ELSEWHERE TOO)
     return (
       <div id="event-show">
@@ -124,26 +114,56 @@ class EventShow extends React.Component {
                 </div>
                 <div id="event-show-top-classification">
                   <p id="event-show-top-title">{this.state.event.title}</p>
-                  <p id="event-show-top-producer">by User Number {this.state.event.user_id}</p>
+                  <p id="event-show-top-producer">by {this.state.event.first_name} {this.state.event.last_name}</p>
                 </div>
               </div>
               <div>
-                <p id="event-show-top-price">{this.state.event.price}</p>
+                <p id="event-show-top-price">{(this.state.event.price) ? "$" : ""}{this.state.event.price || "Free"}</p>
               </div>
             </div>
           </section>
 
           <section id="event-show-sticky-bar">
-            <div>
+            <div id="event-show-middle-buttons">
               <button className="event-show-middle-button"><i className="fas fa-arrow-up fa-lg"></i></button>
               <button className="event-show-middle-button"><i className="far fa-heart fa-lg"></i></button>
             </div>
             <form>
-              <button id="event-show-resister-button">Register</button>
+              <button id="event-show-register-button">Register</button>
             </form>
           </section>
-          <p id="event-show-description-heading">Description</p>
-          <p id="event-show-description">{this.state.event.about}</p>
+
+          <section id="event-show-additional-info">
+            <div id="event-show-additional-info-left">
+              <p className="event-show-heading">Description</p>
+              <p className="event-show-description-general">{this.state.event.about}</p>
+            </div>
+            <div id="event-show-additional-info-right">
+              <div className="event-show-additional-info-right-subsection">
+                <p className="event-show-heading">Date and Time</p>
+                <div className="event-show-additional-info-right-subsection-subsection">
+                  <date className="event-show-right-subtext">{this.formatDate("startDate")} {(this.formatDate("endDate") === this.formatDate("startDate")) ? "" : `- ${this.formatDate("endDate")}`}</date>
+                  {/* This is a problem. Both dates are showing up as same even though they should be two days apart */}
+                  <time className="event-show-right-subtext">{this.setTime("startTime")} - {this.setTime("endTime")}</time>
+                </div>
+              </div>
+              <div className="event-show-additional-info-right-subsection">
+                <p className="event-show-heading">Location</p>
+                <div className="event-show-additional-info-right-subsection-subsection">
+                  <p className="event-show-right-subtext">{this.state.event.venue_name}</p>
+                  <p className="event-show-right-subtext">{this.state.event.address}</p>
+                  {/* <p className="event-show-right-subtext">{(address2) ? this.state.event.address2 : ""}</p> */}
+                  <p className="event-show-right-subtext">{this.state.event.city}, {this.state.event.state} {this.state.event.zip}</p>
+                </div>
+              </div>
+              <div className="event-show-additional-info-right-subsection">
+                <p className="event-show-heading">Refund Policy</p>
+                <div className="event-show-additional-info-right-subsection-subsection">
+                  <p className="event-show-right-subtext">No Refunds</p>
+                </div>
+              </div>
+            </div>
+          </section>
         </main>
 
         <div>

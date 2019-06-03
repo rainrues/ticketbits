@@ -45,9 +45,7 @@ group :development, :test do
   gem 'pry-rails', '~> 0.3.9'
    # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
-  gem "guard", ">= 2.2.2", :require => false
-  gem "guard-livereload",  :require => false
-  gem "rack-livereload"
+  # gem "guard", ">= 2.2.2", :require => false
   gem "rb-fsevent",        :require => false
 end
 

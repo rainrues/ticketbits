@@ -8,6 +8,7 @@ class Api::EventsController < ApplicationController
 
     def show
         @event = Event.find(params[:id])
+        @user = @event.user
         render :show
     end
 

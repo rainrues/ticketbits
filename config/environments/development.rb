@@ -6,8 +6,8 @@ Rails.application.configure do
   # since you don't have to restart the web server when you make code changes.
   config.cache_classes = false
 
-  # Automatically inject JavaScript needed for LiveReload
-  config.middleware.insert_after(ActionDispatch::Static, Rack::LiveReload)
+  # # Automatically inject JavaScript needed for LiveReload
+  # config.middleware.insert_after(ActionDispatch::Static, Rack::LiveReload)
 
   # Do not eager load code on boot.
   config.eager_load = false
