@@ -8,6 +8,8 @@
 
 Event.delete_all
 User.delete_all
+Categories.delete_all
+Categorizations.delete_all
 # Categories.delete_all
 
 
