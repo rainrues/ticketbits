@@ -38,7 +38,6 @@ class EventShow extends React.Component {
     let hour = "";
     let min = "";
     let period = "";
-
     if (field === "startTime") {
       if (this.state.event.start_time_object.hour > 12) {
         hour = `${this.state.event.start_time_object.hour - 12}`;
