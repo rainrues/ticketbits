@@ -5,7 +5,7 @@ Welcome to [TicketBits](https://ticketbits.herokuapp.com/), a single-page clone 
 Homepage has been updated since cloning. To see original copied page go to: https://web.archive.org/web/20190417003843/https://www.eventbrite.com/
 
 ### Technologies
-TicketBits uses React, Redux, and ES6 to dynamically generate the frontend, and Ruby on Rails for data management on the backend.
+TicketBits uses React, Redux, HTML/SASS and Javascript ES6 to dynamically generate the frontend, and SQL, PostgreSQL, ActiveRecord, and Ruby on Rails for data management on the backend.
 
 ## Features
 
@@ -28,11 +28,13 @@ TicketBits' main components are as follows:
   - Includes banner image
   - Includes search bar
   - Shows all events
+  
+3. Styled Event Creation Form
+
+4. Event Browse page
 
 #### Future Features
 
-1. Styled Event Creation Form
-2. Search
-3. Categories
-4. Liking Events
-5. Event Browse page
+1. Search
+2. Categories
+3. Liking Events
