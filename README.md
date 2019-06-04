@@ -10,14 +10,14 @@ TicketBits uses React, Redux, and ES6 to dynamically generate the frontend, and 
 ## Features
 
 + Responsive signin page that will send you to sign up or sign in based on the email you input. 
-![sign in](https://drive.google.com/open?id=1Hu-ljBUToLqsWFuIoxms1WABWVmBHdqC)
+![sign in](https://github.com/rainrues/ticketbits/blob/master/app/assets/images/Sign%20in%20Recording%20(1)%20(1).mov?raw=true)
 
 ### User Authentication
 Users can securely sign up, log in, and log out simply by setting an email address and password for their account.
 Users who are signed in can access different features via the nav bar.
 
-![signed out](https://drive.google.com/open?id=1cC6kveSkqSLdvwiSgSHT4z7HwMaGA07j)
-![signed in](https://drive.google.com/open?id=10efhaoIxYxsLII1MPnUO6hh2ElGVodTl)
+![signed out](https://github.com/rainrues/ticketbits/blob/Master/app/assets/images/NavBarSignedOut.png?raw=true)
+![signed in](https://github.com/rainrues/ticketbits/blob/Master/app/assets/images/NavBarSignedIn.png?raw=true)
 
 ### Structure
 TicketBits' main components are as follows:
