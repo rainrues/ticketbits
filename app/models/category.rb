@@ -1,4 +1,4 @@
-class Categorie < ApplicationRecord
+class Category < ApplicationRecord
     validates :name, null: false
 
     has_many :categorizations
