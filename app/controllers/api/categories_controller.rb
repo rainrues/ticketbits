@@ -1,7 +1,7 @@
 class Api::CategoriesController < ApplicationController
   
   def create
-    @category = Categorie.new(user_params)
+    @category = Category.new(user_params)
     if @category.save
       render 'api/category/show'
     else
@@ -10,7 +10,7 @@ class Api::CategoriesController < ApplicationController
   end
 
   def user_params
-    params.require(:categorie).permit(:name)
+    params.require(:category).permit(:name)
   end
 
 end
