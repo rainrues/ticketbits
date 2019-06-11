@@ -8,8 +8,8 @@
 
 Event.delete_all
 User.delete_all
-Categories.delete_all
-Categorizations.delete_all
+Category.delete_all
+Categorization.delete_all
 
 #USERS
 
@@ -23,7 +23,6 @@ demo = User.create!(
 rain = User.create!(
   email: "rainrues@gmail.com",
   password: "password",
-
   first_name: "Rain",
   last_name: "Rues"
 )
