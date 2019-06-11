@@ -8,8 +8,8 @@
 
 Event.delete_all
 User.delete_all
-# Categories.delete_all
-# Categorizations.delete_all
+Categories.delete_all
+Categorizations.delete_all
 
 #USERS
 
@@ -247,32 +247,11 @@ i = Event.create!(
 )
 
 
-# EXAMPLE OF HOW TO DEAL WITH CATEGORIES FROM EVENT_SITE
-
-# m = Event.new(
-#   title: "Lucyfest",
-#   description: "Lucy is the best dog ever and deserves to be celebrated",
-#   venue_name: "The Fillmore",
-#   address: "1805 Geary Blvd",
-#   city: "San Francisco",
-#   state: "CA",
-#   zip: "94115",
-#   country: "United States of America",
-#   start_time: "04:00"),
-#   start_date: Date.parse("September 3"),
-#   organizer_name: "Sahar",
-#   organizer_description: "I love Lucy.",
-#   user_id: sahar[:id]
-# )
+# EXAMPLES FROM EVENT_SITE
 
 # photofile = File.open("app/assets/images/ticket.jpg")
 # m.photo.attach(io: photofile, filename: "ticket.jpg")
 # m.save!
-
-# EventCategory.create!(
-#     event_id: m.id,
-#     category_id: music.id
-#   )
 
 # #Tickets
 
@@ -288,36 +267,126 @@ i = Event.create!(
 
 # Categories
 
-# music = Category.create!(
-#   name: "Music",
-#   description: "Sound!"
-# )
-# party = Category.create!(
-#   name: "Party",
-#   description: "Fun!"
-# )
-# food = Category.create!(
-#   name: "Food & Drink",
-#   description: "Yum!"
-# )
+music = Category.create!(
+  name: "Music"
+)
 
-# arts = Category.create!(
-#   name: "Arts",
-#   description: "Wow!"
-# )
+party = Category.create!(
+  name: "Party"
+)
 
-# business = Category.create!(
-#   name: "Business",
-#   description: "Networking!"
-# )
+business = Category.create!(
+  name: "Business"
+)
 
-# health = Category.create!(
-#   name: "Health",
-#   description: "Good!"
-# )
+activism = Category.create!(
+  name: "Activism"
+)
 
-#EVENT_CATEGORIES
-# EventCategory.create!(
-#     event_id: a.id,
-#     category_id: party.id
-#   )
+lgbtq = Category.create!(
+  name: "lgbtq"
+)
+
+food = Category.create!(
+  name: "Food"
+)
+
+nature = Category.create!(
+  name: "Nature"
+)
+
+arts = Category.create!(
+  name: "Arts"
+)
+
+#EVENT_CATEGORIZATIONS
+
+one = Categorization.create!(
+  event_id: a[:id],
+  category_id: party[:id]
+)
+
+two = Categorization.create!(
+  event_id: a[:id],
+  category_id: music[:id]
+)
+
+three = Categorization.create!(
+  event_id: b[:id],
+  category_id: party[:id]
+)
+
+four = Categorization.create!(
+  event_id: b[:id],
+  category_id: music[:id]
+)
+
+five = Categorization.create!(
+  event_id: c[:id],
+  category_id: food[:id]
+)
+
+six = Categorization.create!(
+  event_id: c[:id],
+  category_id: lgbtq[:id]
+)
+
+seven = Categorization.create!(
+  event_id: d[:id],
+  category_id: food[:id]
+)
+
+eight = Categorization.create!(
+  event_id: d[:id],
+  category_id: nature[:id]
+)
+
+nine = Categorization.create!(
+  event_id: e[:id],
+  category_id: nature[:id]
+)
+
+ten = Categorization.create!(
+  event_id: f[:id],
+  category_id: party[:id]
+)
+
+eleven = Categorization.create!(
+  event_id: g[:id],
+  category_id: party[:id]
+)
+
+twelve = Categorization.create!(
+  event_id: g[:id],
+  category_id: activism[:id]
+)
+
+thirteen = Categorization.create!(
+  event_id: g[:id],
+  category_id: music[:id]
+)
+
+fourteen = Categorization.create!(
+  event_id: h[:id],
+  category_id: party[:id]
+)
+
+fifteen = Categorization.create!(
+  event_id: h[:id],
+  category_id: lgbtq[:id]
+)
+
+sixteen = Categorization.create!(
+  event_id: h[:id],
+  category_id: nature[:id]
+)
+
+seventeen = Categorization.create!(
+  event_id: i[:id],
+  category_id: party[:id]
+)
+
+eighteen = Categorization.create!(
+  event_id: i[:id],
+  category_id: arts[:id]
+)
