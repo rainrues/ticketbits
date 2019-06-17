@@ -94,7 +94,6 @@ class EventShow extends React.Component {
       return null;
     }
   
-  // THIS NEEDS TO BE CHANGED NOT GOOD PRACTICE TO CHANGE PROPS (CHANGE ELSEWHERE TOO)
     return (
       <div id="event-show">
         <div id="event-show-background-image-container">
