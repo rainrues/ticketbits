@@ -5,7 +5,12 @@ Rails.application.routes.draw do
     resources :users, only: [:show, :create]
     resource :session, only: [:create, :destroy]
     resources :events, except: [:new, :edit, :destroy]
-
+    
+    # get 'search', to: "api/track#search" (queery string)
+    #  ^ in search form set up queery
+    # create route util
+    # can see example in Adrians full stack
+    # Look up post request search (post body)
     post '/email', to: 'sessions#email'
   end
 end
