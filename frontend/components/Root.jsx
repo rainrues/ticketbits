@@ -12,3 +12,5 @@ const Root = ({ store }) => (
 );
   
 export default Root;
+
+// Need to impliment AWS photo storage
