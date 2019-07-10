@@ -4,19 +4,9 @@ Rails.application.routes.draw do
   namespace :api, defaults: {format: :json} do
     resources :users, only: [:show, :create]
     resource :session, only: [:create, :destroy]
-<<<<<<< HEAD
-    resources :events, except: [:new, :edit, :destroy]
-    
-    # get 'search', to: "api/track#search" (queery string)
-    #  ^ in search form set up queery
-    # create route util
-    # can see example in Adrians full stack
-    # Look up post request search (post body)
-=======
     resources :events, except: [:new, :edit]
     resources :categorizations, only: [:create, :destroy]
 
->>>>>>> f8bd65c54a480a0090bcd4c68aad77a4a84b782b
     post '/email', to: 'sessions#email'
   end
 end
